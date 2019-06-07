@@ -1,0 +1,2444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0107)https://www.industry-of-things.de/neural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023/ -->
+<html><script src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/all.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/all(1).js"></script><script type="text/javascript" async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/runtime.2.10.4.js"></script><script async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/script.js"></script><script type="text/javascript" async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/d1ae0dfed5e47be1e6a61830f80e8eec.js"></script><script src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/337772366383480" async=""></script><script async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/fbevents.js"></script><script async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/gtm.js"></script><script src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/f.txt"></script><script async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/analytics.js"></script><script async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/2721275a-bb2c-4292-947a-3b0ab87dfa6b.js"></script><script type="text/javascript" async="" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/recaptcha__de.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><!-- <![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function axfYn() {
+  //<![CDATA[
+  window.UJtUkBc = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.XIBNxRz = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.QFuyR = true;
+    window.ZRqOn = 38.883333;
+    window.ayeNF = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.QFuyR !== 'undefined')) {
+      if (window.QFuyR === true) {
+        window.ocefmhQ({
+          coords: {
+            latitude: window.ZRqOn,
+            longitude: window.ayeNF,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.UJtUkBc(window.ocefmhQ, window.UbdafqH, window.WcCii);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.QFuyR !== 'undefined')) {
+      if (window.QFuyR === true) {
+        navigator.getCurrentPosition(window.uRMqMFX, window.HMvindD, window.zgIvt);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.XIBNxRz(window.uRMqMFX, window.HMvindD, window.zgIvt);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.ocefmhQ = successCallback;
+    window.UbdafqH = errorCallback;
+    window.WcCii = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.uRMqMFX = successCallback;
+    window.HMvindD = errorCallback;
+    window.zgIvt = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${axfYn}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'benvmdm':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.ZRqOn = message.info.coords.lat;
+          window.ayeNF = message.info.coords.lon;
+          window.QFuyR = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}axfYn();})()</script>
+<title>Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen</title>
+<link rel="canonical" href="https://www.elektronikpraxis.vogel.de/neural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-787882/">
+<meta name="description" content="Der Neuronale Compute Stick 2 (NCS2) von Intel ist ein USB-Stick, der Funktionen eines neuronalen Netzes nutzbar macht, ohne dass dafür teure Hardware erforderlich ist.">
+<meta name="robots" content="INDEX, FOLLOW">
+<meta itemprop="image" content="https://images.vogel.de/vogelonline/bdb/1504400/1504457/4.jpg">
+<meta property="og:image" content="https://images.vogel.de/vogelonline/bdb/1504400/1504457/44.jpg">
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen">
+<meta property="og:url" content="https://www.industry-of-things.de/neural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023/">
+<meta property="og:description" content="Der Neuronale Compute Stick 2 (NCS2) von Intel ist ein USB-Stick, der Funktionen eines neuronalen Netzes nutzbar macht, ohne dass dafür teure Hardware erforderlich ist.">
+<link rel="image_src" href="https://images.vogel.de/vogelonline/bdb/1504400/1504457/4.jpg">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if lt IE 9]>
+<script>document.createElement('video');document.createElement('header');document.createElement('section');document.createElement('article');document.createElement('footer');</script>
+<![endif]-->
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="CACHE-CONTROL" content="no-cache">
+<meta http-equiv="EXPIRES" content="0">
+<meta http-equiv="content-language" content="de">
+<meta name="language" content="de">
+<meta name="Copyright" content="Vogel Communications Group GmbH &amp; Co. KG">
+<meta name="Audience" content="Alle">
+<meta name="Publisher" content="Vogel Communications Group GmbH &amp; Co. KG">
+<meta name="Author" content="Vogel Communications Group GmbH &amp; Co. KG">
+<meta name="Author-mail" content="info@vogel.de">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="https://www.industry-of-things.de/img/bep30/touch/icon-60x60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.industry-of-things.de/img/bep30/touch/icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.industry-of-things.de/img/bep30/touch/icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.industry-of-things.de/img/bep30/touch/icon-152x152.png">
+<link rel="icon" sizes="192x192" href="https://www.industry-of-things.de/img/bep30/touch/icon-192x192.png">
+<meta name="application-name" content="Industry of Things">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-square70x70logo" content="/img/bep30/touch/icon-152x152.png">
+<meta name="msapplication-square150x150logo" content="/img/bep30/touch/icon-152x152.png">
+<meta name="msapplication-wide310x150logo" content="/img/bep30/touch/icon-310x150.png">
+<meta name="msapplication-square310x310logo" content="/img/bep30/touch/icon-310x310.png">
+<link href="https://www.industry-of-things.de/favicon.ico" rel="SHORTCUT ICON">
+<link href="https://www.industry-of-things.de/shared/vogelonline/opensearch/opensearch.cfm?pid=13964&amp;name=Industry%20of%20Things&amp;server=http://www.industry-of-things.de" title="Industry of Things" type="application/opensearchdescription+xml" rel="search">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/libraries_v200818.css">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/ionicons.min.css">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/global_responsive.css">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/banner_960.css">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/sizes.css">
+<link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/screen_basic.css">
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css"	href="/shared/vogelonline/css/bep30/ie7.css">
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css"	href="/shared/vogelonline/css/bep30/ie7.css">
+<![endif]-->
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/api.js" async="async"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/libraries_v200818.js"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/ads.js"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/functions.js" async="async"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/iam.js"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/lib.mini.js" async="async"></script>
+<!-- Start Piwik PRO Tag Manager code -->
+<script type="text/javascript">
+(function(window, document, script, dataLayer, id) {
+window[dataLayer]=window[dataLayer]||[],window[dataLayer].push({start:(new Date).getTime(),event:"stg.start"});
+var scripts=document.getElementsByTagName(script)[0],tags=document.createElement(script),dl="dataLayer"!=dataLayer?"?dataLayer="+dataLayer:"";
+tags.async=!0,tags.src="//tag.aumago.com/2721275a-bb2c-4292-947a-3b0ab87dfa6b.js"+dl,scripts.parentNode.insertBefore(tags,scripts);
+})(window, document, 'script', 'dataLayer', '2721275a-bb2c-4292-947a-3b0ab87dfa6b');
+</script>
+<noscript><iframe src="//tag.aumago.com/2721275a-bb2c-4292-947a-3b0ab87dfa6b/noscript.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Piwik PRO Tag Manager code -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</script>
+<script type="text/javascript">
+	(function() {
+	var useSSL = 'https:' == document.location.protocol;
+	var src = (useSSL ? 'https:' : 'http:') +
+	'//www.googletagservices.com/tag/js/gpt.js';
+	document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+	})();
+</script><script src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/gpt.js"></script><script id="gpt-impl-0.9768592780956196" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/pubads_impl_2019032901.js"></script><link rel="preload" href="https://adservice.google.de/adsid/integrator.sync.js?domain=www.industry-of-things.de" as="script"><script src="https://adservice.google.de/adsid/integrator.sync.js?domain=www.industry-of-things.de"></script><script>processGoogleTokenSync({"newToken":"FBS"},5);</script>
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.sizeMapping != "undefined")
+{
+	
+			var map_14092_960x250_RX0 = googletag.sizeMapping().addSize([0, 0],[300, 150]).addSize([1025, 0], [960, 250]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [960, 250], 'ban_14092_960x250_RX0').
+		defineSizeMapping(map_14092_960x250_RX0).setCollapseEmptyDiv(true).addService(googletag.companionAds()).addService(googletag.pubads());
+	var map_14092_728x90_468x60_RX1 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [[728, 90],[468, 60]]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [[728, 90],[468, 60]], 'ban_14092_728x90_468x60_RX1').
+defineSizeMapping(map_14092_728x90_468x60_RX1).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	googletag.defineOutOfPageSlot('/2686/industry-of-things.de/DE_IOT_Technologie', 'ban_14092_728x90_oop').addService(googletag.pubads());
+	
+			var map_14092_160x600_RX2 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [160, 600]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [160, 600], 'ban_14092_160x600_RX2').
+		defineSizeMapping(map_14092_160x600_RX2).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	
+			var map_14092_161x600_RX3 = googletag.sizeMapping().addSize([0, 0], [1, 1]).addSize([1025, 0], [161, 600]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [161, 600], 'ban_14092_161x600_RX3').
+		defineSizeMapping(map_14092_161x600_RX3).setCollapseEmptyDiv(true).addService(googletag.pubads());
+	var map_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4 = googletag.sizeMapping().addSize([0, 0], [[150, 150],[150, 151],[150, 152],[150, 153],[150, 154],[300, 250],[300, 600]]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [[150, 150],[150, 151],[150, 152],[150, 153],[150, 154],[300, 250],[300, 600]], 'ban_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4').
+		defineSizeMapping(map_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4).addService(googletag.pubads());
+	
+			var map_14092_960x600_RX5 = googletag.sizeMapping().addSize([0, 0], [960, 600]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [960, 600], 'ban_14092_960x600_RX5').
+		defineSizeMapping(map_14092_960x600_RX5).addService(googletag.pubads());
+	
+			var map_14092_300x251_RX6 = googletag.sizeMapping().addSize([0, 0], [300, 251]).build();
+	googletag.defineSlot('/2686/industry-of-things.de/DE_IOT_Technologie', [300, 251], 'ban_14092_300x251_RX6').
+		defineSizeMapping(map_14092_300x251_RX6).addService(googletag.pubads());
+	googletag.pubads().setTargeting('kw', ['wallpaper','SolidCAM_317509','WerLiefertWas_318723','University4Industry_2018','Schneider_321396','Micro-Epsilon_312678_Thema','LandesmesseStuttgart_315945','EigenwerbungInsider_KI','SchneiderElectric_322966','323389_Alcatel','AlcatelLucent_323389','Innovation_318552_UCC','326918_internetofthings','rittal_327655','BDI_KuenstlicheIntelligenz','IBM_329105']);
+	googletag.pubads().enableSyncRendering();
+	googletag.enableServices();
+}
+</script>
+<script type="text/javascript">
+	var Ads_BA_ADIDsite = "industry-of-things.de";
+	var Ads_BA_ADIDsection = "rotation";//bzw. passende Rubrik
+	var Ads_BA_keyword = "";
+</script>
+
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/iot_adlib.js"></script>
+<script type="text/javascript" src="https://de.ioam.de/tx.io?st=inthings&amp;cp=technologie&amp;co=14092&amp;sv=ke&amp;pt=CP&amp;ps=lin&amp;er=N22&amp;rf=www.industry-of-things.de&amp;r2=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;ur=www.industry-of-things.de&amp;xy=1280x800x24&amp;lo=DE%2FBayern&amp;cb=0011&amp;i2=00115a612e44d28ae5ca63855&amp;ep=1584184635&amp;vr=412&amp;id=whpiz0&amp;i3=nocookie&amp;n1=13&amp;dntt=1&amp;lt=1554397296477&amp;ev=&amp;cs=e9sgbs&amp;mo=1"></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-32/html/container.html"><style>.cke{visibility:hidden;}</style><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/config.js"></script><link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/editor.css"><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/de.js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/styles.js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin.js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(1).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(2).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(3).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(4).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(5).js"></script><style type="text/css">@font-face{font-family:gsc;src:url(//st.getsitecontrol.com/main/widgets/201809/ec0f75b9ec70a83cbd5546650a951fac/common/fonts/gsc.eot?) format('embedded-opentype');font-weight:400;font-style:normal}@font-face{font-family:gsc;src:url(data:application/octet-stream;base64,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) format('truetype');font-weight:400;font-style:normal}@font-face{font-family:emoji;src:local('Apple Color Emoji'),local('Android Emoji'),local('Segoe UI'),local(EmojiSymbols),local(Symbola);unicode-range:U+1F300-1F5FF,U+1F600-1F64F,U+1F680-1F6FF,U+2600-26FF}@keyframes gscw-bounceInLeft{0%,100%,40%,65%,90%{transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate(-3000px,0)}40%{opacity:1;transform:translate(35px,0)}65%{transform:translate(-15px,0)}90%{transform:translate(5px,0)}100%{transform:none}}@keyframes gscw-bounceInRight{0%,100%,40%,65%,90%{transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate(3000px,0)}40%{opacity:1;transform:translate(-35px,0)}65%{transform:translate(15px,0)}90%{transform:translate(-5px,0)}100%{transform:none}}@keyframes gscw-bounceInUp{0%,100%,40%,65%,90%{transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate(0,700px)}40%{opacity:1;transform:translate(0,-35px)}65%{transform:translate(0,15px)}90%{transform:translate(0,-5px)}100%{transform:none}}@keyframes gscw-bounceInDown{0%,100%,40%,65%,90%{transition-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;transform:translate(0,-700px)}40%{opacity:1;transform:translate(0,35px)}65%{transform:translate(0,-15px)}90%{transform:translate(0,5px)}100%{transform:none}}@keyframes gscw-bounceOutLeft{20%{opacity:1;transform:translate(20px,0)}100%{opacity:0;transform:translate(-2000px,0)}}@keyframes gscw-bounceOutRight{20%{opacity:1;transform:translate(-20px,0)}100%{opacity:0;transform:translate(2000px,0)}}@keyframes gscw-slideOutLeft{100%{transform:translate(-100%,0)}}@keyframes gscw-slideOutRight{100%{transform:translate(100%,0)}}@keyframes gscw-slideInLeft{0%{transform:translate(-100%,0)}100%{transform:none}}@keyframes gscw-slideInRight{0%{transform:translate(100%,0)}100%{transform:none}}@keyframes gscw-fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes gscw-fadeInLeft{0%{opacity:0;transform:translate(-60%,0)}100%{opacity:1;transform:none}}@keyframes gscw-fadeInRight{0%{opacity:0;transform:translate(60%,0)}100%{opacity:1;transform:none}}@keyframes gscw-fadeInUp{0%{opacity:0;transform:translate(0,60%)}100%{opacity:1;transform:none}}@keyframes gscw-fadeInDown{0%{opacity:0;transform:translate(0,-60%)}100%{opacity:1;transform:none}}@keyframes gscw-fadeOut{0%{opacity:1}100%{opacity:0}}@keyframes gscw-zoomIn{0%{opacity:0;transform:scale(.3,.3)}50%{opacity:1}100%{transform:none}}@keyframes gscw-zoomOut{0%{opacity:1}50%{opacity:0;transform:scale(.3,.3)}100%{opacity:0}}@keyframes gscw-swing{0%{opacity:0}20%{transform:rotate3d(0,0,1,15deg)}40%{opacity:1;transform:rotate3d(0,0,1,-10deg)}60%{transform:rotate3d(0,0,1,5deg)}80%{transform:rotate3d(0,0,1,-5deg)}100%{transform:rotate3d(0,0,1,0deg)}}@keyframes gscw-bounceIn{0%{opacity:0;transform:scale(.3,.3)}30%{transform:scale(1.3,1.3)}55%{opacity:1;transform:scale(.8,.8)}72%{transform:scale(1.13,1.13)}87%{transform:scale(.97,.97)}100%{transform:none}}@keyframes gscw-flipTy{0%{transition-timing-function:ease-in;transform:rotateY(180deg) scale(.4,.4)}100%{transform:rotateY(0) scale(1,1)}}@keyframes gscw-flip{0%{transform:rotateY(180deg)}100%{transform:rotateY(0)}}@keyframes gscw-typing{0%,100%,80%{opacity:0;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}@keyframes gscw-notify{0%{transform:scale(.1,.1);opacity:.3}100%{opacity:1;transform:none}}@keyframes gscw-highlight{100%{transform:none}0%,99%{transform:translate(0,0)}20%{transform:translate(-5px,0)}60%{transform:translate(-2.5px,0)}40%{transform:translate(5px,0)}80%{transform:translate(2.5px,0)}}body.g82djbb{overflow:hidden!important}html.g15klhp,html.g15klhp>body{overflow:hidden!important}.g-mz8u5v{cursor:pointer}body.gcahe02:before{transition:height .5s cubic-bezier(.455,.03,.515,.955);content:' ';display:block;visibility:hidden;height:0!important;padding:0;margin:0}.g-waw4ql.gcahe02:before{transition:none!important}body.gcahe02.gfaucr7:before{height:42px!important}body.gcahe02.g-qpbwfw:before{transition:none!important}w-div{display:block;vertical-align:inherit}.g-illbw,.g-w8i9v9{animation-name:gscw-highlight!important;animation-duration:.6s!important;-webkit-font-smoothing:subpixel-antialiased;-ms-transform-origin:left;transform-origin:left}.g-g7n0ys{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.g-qpbwfw *{transition:none!important}</style><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(6).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(7).js"></script><link type="text/css" rel="stylesheet" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/httpFront-v4.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(8).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/plugin(9).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/de(1).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/de(2).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/de(3).js"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/de(4).js"></script><link rel="stylesheet" type="text/css" href="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/wordcount.css"></head>
+<body id="cid_52" cz-shortcut-listen="true"><div id="cookie-statement" style="line-height:1.8em;text-align: center;font-size: 0.7em;padding: 8px 1%;background-color:#9a9a9a;;color:#fff;width:98%;z-index: 12999;">				<div style="display: block;padding: 0 15px;">				  <span style="color:#fff">Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer		  Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden.</span>				  <a target="_blank" href="https://privacy.vogel.de/datenschutz.html" style="display: inline;margin-left: 0.5em;color: #FFF;cursor: pointer;white-space: nowrap;background-color: #6A6A6A;;padding: 3px 5px;text-decoration: none;border: 1px solid rgb(255, 255, 255);border-radius: 6px;">Weitere Informationen</a>				  <a href="javascript:cookie_note.hideOnOk()" id="close-cc-bar" style="display: inline;margin-left: 0.5em;color: #FFF;cursor: pointer;white-space: nowrap;background-color: #88bb88;padding: 3px 15px;text-decoration: none; border: 1px solid rgb(255, 255, 255);border-radius: 6px;">OK</a>				  </div></div><style type="text/css" id="cookie-statement-style">#mobile-header {position: relative !important;} #whitespace_click {top:40px !important} .sky {position:relative !important} .sky_hs1 {position:relative !important} .sky_hs2 {position:relative !important} @media only screen and (max-width: 1024px) { #wrapper{margin-top: 0 !important;}}</style>
+<div id="iqadtileOOP"></div>
+<script>
+dataLayer = [{"ipadress": ""}];
+$.ajax({
+url: "/getip/ajax/",
+dataType: 'json',
+timeout: 700
+}).done(function( response ) {
+if (response.ip != ''){
+dataLayer.ipadress = response.ip;
+}
+});
+</script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N5DK62"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>if(typeof getCookie === 'function' && getCookie('revokecookies') !== 'true'){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N5DK62');}</script>
+<div id="ivwcode">
+<!-- start ivw-aufruf szm version="2.0" pid 14092 //-->
+<script type="text/javascript">
+var iam_data = {
+"st":"inthings",
+"cp":"technologie",
+"co":"14092",
+"sv":"ke"
+}
+if (typeof iom != "undefined")
+{
+iom.c(iam_data, 1);
+}
+</script>
+<!-- ende ivw-aufruf szm version="2.0" //-->
+</div>
+<script type="text/javascript">
+/* SiteCatalyst Variablen setzen */
+var STR_sc_account="";
+var STR_sc_clientshortcut="";
+STR_sc_account="vsindustry-of-thingsde";
+if(window.location.host.search(/^red\./) >= 0 || window.location.host.search(/^dev\./) >= 0 || window.location.host.search(/^preview\./) >= 0 || window.location.host.search(/^task\./) >= 0)
+{
+STR_sc_account=STR_sc_account + "dev";
+}
+else
+{
+STR_sc_account=STR_sc_account + "prod";
+}
+STR_sc_clientshortcut="win";
+STR_sc_linkInternalFilters="javascript:,industry-of-things.de";
+STR_sc_cookieDomainPeriods="2";
+STR_sc_fpCookieDomainPeriods="2";
+STR_sc_currencyCode="EUR";
+</script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/s_code.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+if ($(window).width() >= 520)
+{
+$(".colorbox_imagedetail").colorbox({iframe:true, innerWidth:"20%", innerHeight:"20%", scrolling:false, fastIframe:false});
+}
+else
+{
+$(".colorbox_imagedetail").click(function(e){
+e.preventDefault();
+window.open($(this).find('img').attr('src'), '_blank');
+});
+}
+if ($('#mobile-header').length)
+{
+var INT_headerpos = $('#mobile-header').offset().top;
+var INT_headerheight = $('#mobile-header').height();
+var BOO_mobileheader = $('#mobile-header').is(":visible");
+$(document).on("scroll", function() {
+var BOO_cookiestatement = ($('#cookie-statement').length == 0 || $('#cookie-statement').is(":visible") == false);
+if ($(window).width() > 1024 && BOO_cookiestatement ) {
+if ($(document).scrollTop() > INT_headerpos && !$('#mobile-header').hasClass("small")) {
+$('#mobile-header').addClass("small");
+if (BOO_mobileheader) {
+$("#website").addClass("fixed-header").css("padding-top",INT_headerheight+'px');
+}
+}
+else if ($(document).scrollTop() <= INT_headerpos && $('#mobile-header').hasClass("small")) {
+$('#mobile-header').removeClass("small");
+if (BOO_mobileheader) {
+$("#website").removeClass("fixed-header").css("padding-top",'0px');
+}
+}
+}
+});
+}
+});
+</script>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script type="text/javascript">
+$(window).load(function () {
+(function(d){
+var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement('script'); js.id = id; js.async = true;
+js.src = "//connect.facebook.net/de_DE/all.js";
+ref.parentNode.insertBefore(js, ref);
+}(document));
+});
+</script>
+<div id="website">
+<div id="leaderboard">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_728x90_468x60_RX1 img",""); }});
+</script>
+<div id="ban_14092_728x90_468x60_RX1" class=" " style="position:relative;">
+<div id="52_leaderboard">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_728x90_468x60_RX1');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=728x90%7C468x60&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296493&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=160&amp;ady=0&amp;adk=4054398144&amp;uci=1&amp;ifi=1&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=33&amp;icsg=2148469379&amp;std=0&amp;csl=135&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=970x0&amp;msz=970x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-1"></script><script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/pubads_impl_rendering_2019032901.js" id="rendering"></script>
+</div>
+</div>
+<div id="ban_14092_728x90_oop">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_728x90_oop');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=1x1&amp;ists=1&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296541&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=160&amp;ady=0&amp;adk=3357072332&amp;uci=2&amp;ifi=2&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=36&amp;icsg=34375510074&amp;std=0&amp;csl=128&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=970x0&amp;msz=970x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-2"></script>
+</div>
+</div>
+<div id="skyright">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_160x600_RX2 img",""); }});
+</script>
+<div id="ban_14092_160x600_RX2" class=" " style="position:relative;">
+<div id="52_skyright">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_160x600_RX2');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=160x600&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296592&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=1140&amp;ady=0&amp;adk=3075192296&amp;uci=3&amp;ifi=3&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=39&amp;icsg=137502040298&amp;std=0&amp;csl=129&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=0x0&amp;msz=0x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-3"></script>
+</div>
+</div>
+</div>
+<div id="skyleft">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_161x600_RX3 img",""); }});
+</script>
+<div id="ban_14092_161x600_RX3" class=" " style="position:relative;">
+<div id="52_skyleft">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_161x600_RX3');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=161x600&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296608&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=160&amp;ady=0&amp;adk=3936992514&amp;uci=4&amp;ifi=4&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=42&amp;icsg=550008161194&amp;std=0&amp;csl=129&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=0x0&amp;msz=0x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-4"></script>
+</div>
+</div>
+</div>
+<!-- Out of Cache-Include: /modules/header/head/mobilenavi.cfm -->
+<div id="mobile-navi">
+<ul id="service-menu">
+<li class="item-login">
+<a href="https://www.industry-of-things.de/login/">
+Login
+</a>
+</li>
+<li class="item-reg">
+<a href="https://www.industry-of-things.de/registrierung/">
+Registrierung
+</a>
+</li>
+<li class="item-nl">
+<a href="https://www.industry-of-things.de/newsletter/">
+Newsletter
+</a>
+</li>
+</ul>
+<ul id="main-navi">
+<li class="menueitemhome">
+<a href="https://www.industry-of-things.de/" target="">Startseite</a>
+</li>
+<li class=" menueitem1">
+<a href="https://www.industry-of-things.de/iot-szene/" target="">
+Internet of Things
+</a>
+</li>
+<li class=" menueitem2">
+<a href="https://www.industry-of-things.de/iot-praxis/" target="">
+Praxis
+</a>
+</li>
+<li class=" menueitem3">
+<a href="https://www.industry-of-things.de/iot-technologie/" target="">
+Technologie
+</a>
+</li>
+<li class=" menueitem4">
+<a href="https://www.industry-of-things.de/iot-security/" target="">
+Security
+</a>
+</li>
+<li class=" menueitem5">
+<a href="https://www.industry-of-things.de/autoren/" target="">
+IoT-Experten
+</a>
+</li>
+<li class=" menueitem6">
+<a href="https://www.industry-of-things.de/webinare/" target="">
+Webinare
+</a>
+</li>
+<li class=" menueitem7">
+<a href="https://www.industry-of-things.de/whitepaper/" target="">
+Whitepaper
+</a>
+</li>
+<li class=" menueitem8">
+<a href="https://www.industry-of-things.de/firmen/" target="">
+Firmen
+</a>
+</li>
+</ul>
+<ul id="footer-navi">
+<li class="footer-impress">
+<a href="https://www.industry-of-things.de/index.cfm?pid=13966">Impressum</a>
+</li>
+<li class="footer-media">
+<a href="https://www.industry-of-things.de/media/" target="_blank">Media</a>
+</li>
+<li class="footer-privacy">
+<a href="https://privacy.vogel.de/datenschutz.html" target="_blank">Datenschutz</a>
+</li>
+</ul>
+</div>
+<div id="mobile-header">
+<button id="menu"><span>Menü</span></button>
+<button id="searchexpander"><span>Suche</span></button>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#btn_newsletter").click(function(){
+window.location.href = "/newsletter/";
+});
+});
+</script>
+<style>
+#icons_header{
+display:none;
+}
+</style>
+<button id="btn_newsletter">
+<span class="nl_bdi">Newsletter</span>
+</button>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#btn_myaccount").click(function(){
+window.location.href = "/my/profile/";
+});
+});
+</script>
+<style>
+#icons_header{
+display:none;
+}
+</style>
+<button id="btn_myaccount">
+<span class="login_bdi">Mein Account</span>
+</button>
+<a id="mobile-logo" href="https://www.industry-of-things.de/"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/logo.png" alt="logo"></a>
+<button id="mobile-close"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/close_x.png"></button>
+<form method="get" action="https://www.industry-of-things.de/suchergebnis/">
+<input name="keyword" type="text" id="mobile-search" value="">
+<button><span>suchen..</span></button>
+</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#menu').click(function(){
+$('body').toggleClass('open');
+});
+$('#searchexpander').click(function(){
+$('#mobile-header').toggleClass('open');
+if ('' != '')
+{
+// Blur-Effekt auf Suchfeld
+$("#mobile-search").bind("focusin", function(a)
+{
+STR_val = $(this).val();
+if ( a.type == "focusin" && ( STR_val == '' || STR_val == '') )
+{
+$(this).val('');
+}
+});
+}
+else
+{
+$('#mobile-search').focus();
+}
+});
+$('#mobile-close').click(function(){
+$('#mobile-header').toggleClass('open');
+});
+$('#mobile-navi li.gosubnavi a,#mobile-navi li.gosubnavi div').click(function(e){
+e.preventDefault();
+$(this).parent('li').next('li.mob-submenu').toggle();
+});
+$("#service-menu .profilelink").click(function(){
+window.location.href= "/my/publicprofile/#crop-avatar";
+});
+});
+</script>
+<div id="wrapper">
+<div class="head_14092 head" id="head_52">
+<div id="head_top">
+<img class="vbm" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/vogel_top.png">
+<div>
+</div>
+<div class="clear"></div>
+</div>
+<div id="head_logo">
+<a href="https://www.industry-of-things.de/"><img id="logo" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/logo.png" alt="logo"></a>
+<div id="search">
+<form id="quicksearchform" name="quicksearchform" class="quicksearchform" method="get" action="https://www.industry-of-things.de/suchergebnis/">
+<a href="javascript:void(0);" id="searchbutton" class="searchbutton">
+<span class="button">suchen</span>
+</a>
+<input name="keyword" type="text" class="searchfield" id="searchfield" value="">
+</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+// Blur-Effekt auf Suchfeld
+$("#searchfield").bind("focusin focusout", function(a)
+{
+STR_val = $(this).val();
+if ( a.type == "focusin" && ( STR_val == '' || STR_val == '') )
+{
+$(this).val('');
+}
+else if ( a.type == "focusout" && STR_val == '' )
+{
+$(this).val('');
+}
+});
+// Suche auf Button-Klick abschicken
+$(".searchbutton").click(function(e){
+var STR_value = $(this).parent().find(".searchfield").val();
+if (STR_value == "" || STR_value == "" || STR_value == "")
+{
+STR_value = "";
+e.preventDefault();
+}
+else
+{
+// Trim
+$(this).parent().find(".searchfield").val($.trim(STR_value));
+$(this).closest(".quicksearchform").submit();
+}
+});
+});
+</script>
+<div class="clear"></div>
+</div>
+</div>
+<div id="main_menu">
+<ul id="main_nav">
+<li class=" main_nav_first menueitem1">
+<a href="https://www.industry-of-things.de/iot-szene/" name="Internet of Things" alt="" target="">
+Internet of Things
+</a>
+</li>
+<li class=" menueitem2">
+<a href="https://www.industry-of-things.de/iot-praxis/" name="Praxis" alt="" target="">
+Praxis
+</a>
+</li>
+<li class="active menueitem3">
+<a href="https://www.industry-of-things.de/iot-technologie/" name="Technologie" alt="" target="">
+Technologie
+</a>
+</li>
+<li class=" menueitem4">
+<a href="https://www.industry-of-things.de/iot-security/" name="Security" alt="" target="">
+Security
+</a>
+</li>
+<li class=" menueitem5">
+<a href="https://www.industry-of-things.de/iot-themenspecials/" name="IoT-Specials" alt="" target="">
+IoT-Specials
+</a>
+</li>
+<li class=" main_nav_last menueitem6">
+<a href="https://www.industry-of-things.de/autoren/" name="IoT-Experten" alt="" target="">
+IoT-Experten
+</a>
+</li>
+</ul>
+</div>
+<div class="clear"></div>
+<div id="breadcrumb_bg">
+<p id="cookietrail">
+<span>Sie befinden sich hier:</span>
+<a class="" href="https://www.industry-of-things.de/iot-technologie/">Technologie</a>
+</p>
+<!-- Out of Cache-Include: /modules/header/head/mysiteheader.cfm -->
+<p id="login">
+Sie sind noch nicht angemeldet&nbsp;
+<a href="https://www.industry-of-things.de/index.cfm?pid=13963&amp;tab=0&amp;cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D789023%26p%3D1&amp;os=2D5455BB411CEC98F92D927D5649E312" class="colorbox_log">Login</a>
+&nbsp;|&nbsp;
+<a href="https://www.industry-of-things.de/index.cfm?pid=13963&amp;tab=1&amp;cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D789023%26p%3D1&amp;os=2D5455BB411CEC98F92D927D5649E312" class="colorbox_reg">Registrierung</a>
+&nbsp;|&nbsp;
+<a href="https://www.industry-of-things.de/index.cfm?pid=13970">Newsletter</a>
+</p>
+<!-- Out of Cache-Include: /modules/header/head/usermenue.cfm -->
+</div>
+<div id="resp_container">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_960x250_RX0 img",""); }});
+</script>
+<div id="ban_14092_960x250_RX0" class=" " style="position:relative;">
+<div id="containerobject_436327">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_960x250_RX0');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=960x250&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296639&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=170&amp;ady=101&amp;adk=2555467109&amp;uci=5&amp;ifi=5&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=49&amp;icsg=2200032644778&amp;std=0&amp;csl=129&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=960x0&amp;msz=960x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=4" id="sae-script-5"></script>
+</div>
+</div>
+</div>
+<div id="content_wrap" class="silver-lake">
+<!-- INT_imagestotalgallery:0-->
+<article id="containerobject_419158" class="">
+<header class="page1"><div><h2 class="subhead">Deep Learning</h2><h1 class="headline">Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen</h1><p id="autor">
+  <time pubdate="pubdate">10.01.19</time> | Autor: <a href="https://www.industry-of-things.de/margit-kuther/">Margit Kuther</a></p>
+</div><a class="colorbox_imagedetail cboxElement" id="topmessageimageurl" href="https://www.industry-of-things.de/index.cfm?pid=13959&amp;pk=1504458&amp;type=article&amp;fk=789023"><div><img id="topmessageimage" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/41.jpg" alt="Intels Neural Compute Stick 2: schnelle Umsetzung von Deep-Neural-Network-Konzepten" title="Intels Neural Compute Stick 2: schnelle Umsetzung von Deep-Neural-Network-Konzepten"></div></a></header><div id="topmessageimagetitle" class="bildunterschrift">Intels Neural Compute Stick 2: schnelle Umsetzung von Deep-Neural-Network-Konzepten <span class="picsource">
+(Bild: RS Components)
+</span></div><div class="rolling-prairie" id="page1"><div class="dog-fish">
+<div class="row1r relatedcompanies" id="art_relatedcompanies_52">
+<div class="teaser_titel">
+<p>Firmen zum Thema</p>
+</div>
+<div class="teaser_content">
+<div class="relcom_companyname" data-comtype="basic" data-comid="184" data-comurl="/rs-components-gmbh/firma/184/" data-comname="RS Components GmbH" data-comloc="Mörfelden-Walldorf">RS Components GmbH<div class="relcom_teaser" style="display: none; border-left-color: rgb(100, 100, 100);">
+<div class="firmenlogo">
+<a class="gal_klein_link" href="https://www.industry-of-things.de/rs-components-gmbh/firma/184/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+<img crossorigin="anonymous" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/fallback_100x100_company.png" alt="RS Components GmbH" title="RS Components GmbH">
+</a>
+</div>
+<div>
+<h3><a class="gal_klein_link" href="https://www.industry-of-things.de/rs-components-gmbh/firma/184/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">RS Components GmbH</a></h3>
+<p><a class="gal_klein_link" href="https://www.industry-of-things.de/rs-components-gmbh/firma/184/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">64546 Mörfelden-Walldorf | Deutschland</a></p><p>
+</p><p><a class="gal_klein_link" href="https:" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank"></a></p>
+<p class="anbieterinfo">
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/rs-components-gmbh/firma/184/" title="RS Components GmbH">Firmenprofil</a>
+|
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/rs-components-gmbh/kontakt/firma/184/" title="RS Components GmbH">Kontakt</a>
+</p>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="relcom_companyname" data-comtype="premium" data-comid="252112" data-comurl="/vogel-it-akademie/firma/252112/" data-comname="Vogel IT-Akademie" data-comloc="Augsburg">Vogel IT-Akademie<div class="relcom_teaser" style="display: none; border-left-color: rgb(54, 73, 102);">
+<div class="firmenlogo">
+<a class="gal_klein_link" href="https://www.industry-of-things.de/vogel-it-akademie/firma/252112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+<img crossorigin="anonymous" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/38.jpg" alt="Vogel IT-Akademie" title="Vogel IT-Akademie">
+</a>
+</div>
+<div>
+<h3><a class="gal_klein_link" href="https://www.industry-of-things.de/vogel-it-akademie/firma/252112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">Vogel IT-Akademie</a></h3>
+<p><a class="gal_klein_link" href="https://www.industry-of-things.de/vogel-it-akademie/firma/252112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">86157 Augsburg | Deutschland</a></p><p>
+</p><p><a class="gal_klein_link" href="https:" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank"></a></p>
+<p class="anbieterinfo">
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/vogel-it-akademie/firma/252112/" title="Vogel IT-Akademie">Firmenprofil</a>
+|
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://kontakt/firma/252112/" title="Vogel IT-Akademie">Kontakt</a>
+</p>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="relcom_companyname" data-comtype="premium" data-comid="283961" data-comurl="/confluent-germany-gmbh/firma/283961/" data-comname="Confluent Germany GmbH" data-comloc="Köln">Confluent Germany GmbH<div class="relcom_teaser" style="display: none; border-left-color: rgb(242, 237, 235);">
+<div class="relcom_content" style="color: rgb(242, 237, 235);">
+<h2>Nachrichten zur Firma</h2>
+<a class="gal_klein_link" href="https://www.industry-of-things.de/confluent-germany-gmbh/nachrichten/firma/283961/584250" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+Kafka Summit London: Der frühe Vogel bekommt noch Tickets
+</a>
+</div>
+<div class="firmenlogo">
+<a class="gal_klein_link" href="https://www.industry-of-things.de/confluent-germany-gmbh/firma/283961/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+<img crossorigin="anonymous" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/38(1).jpg" alt="Confluent Germany GmbH" title="Confluent Germany GmbH">
+</a>
+</div>
+<div>
+<h3><a class="gal_klein_link" href="https://www.industry-of-things.de/confluent-germany-gmbh/firma/283961/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">Confluent Germany GmbH</a></h3>
+<p><a class="gal_klein_link" href="https://www.industry-of-things.de/confluent-germany-gmbh/firma/283961/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">50823 Köln | Deutschland</a></p><p>
+</p><p><a class="gal_klein_link" href="https:" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank"></a></p>
+<p class="anbieterinfo">
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/confluent-germany-gmbh/firma/283961/" title="Confluent Germany GmbH">Firmenprofil</a>
+|
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/kafka-summit-london-der-fruehe-vogel-bekommt-noch-tickets/kontakt/firma/283961/" title="Confluent Germany GmbH">Kontakt</a>
+</p>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="relcom_companyname" data-comtype="premium" data-comid="281112" data-comurl="/rhebo-gmbh/firma/281112/" data-comname="Rhebo GmbH" data-comloc="Leipzig">Rhebo GmbH<div class="relcom_teaser" style="display: none; border-left-color: rgb(225, 210, 204);">
+<div class="relcom_content" style="color: rgb(225, 210, 204);">
+<h2>Nachrichten zur Firma</h2>
+<a class="gal_klein_link" href="https://www.industry-of-things.de/rhebo-gmbh/nachrichten/firma/281112/584038" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+Rhebo und INSYS icom gewährleisten Effizienz und Cybersicherheit in Industrienetzwerken
+</a>
+</div>
+<div class="firmenlogo">
+<a class="gal_klein_link" href="https://www.industry-of-things.de/rhebo-gmbh/firma/281112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">
+<img crossorigin="anonymous" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/38(2).jpg" alt="Rhebo GmbH" title="Rhebo GmbH">
+</a>
+</div>
+<div>
+<h3><a class="gal_klein_link" href="https://www.industry-of-things.de/rhebo-gmbh/firma/281112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">Rhebo GmbH</a></h3>
+<p><a class="gal_klein_link" href="https://www.industry-of-things.de/rhebo-gmbh/firma/281112/" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank">04179 Leipzig | Deutschland</a></p><p>
+</p><p><a class="gal_klein_link" href="https:" onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" target="_blank"></a></p>
+<p class="anbieterinfo">
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/rhebo-gmbh/firma/281112/" title="Rhebo GmbH">Firmenprofil</a>
+|
+<a onclick="s_objectID=&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;;linkTracking(&#39;14092_art_relatedcompanies_52_firmen zum thema&#39;,&#39;related&#39;,&#39;art_relatedcompanies_52&#39;)" href="https://www.industry-of-things.de/rhebo-und-insys-icom-gewaehrleisten-effizienz-und-cybersicherheit-in-industrienetzwerken/kontakt/firma/281112/" title="Rhebo GmbH">Kontakt</a>
+</p>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var colorThief = new ColorThief();
+$(".relcom_teaser .firmenlogo img").each(function(index) {
+var color = colorThief.getColor($(this)[0]);
+$(this).parents('.relcom_teaser').css({'border-left-color':'rgb('+color+')'}).find('.relcom_content').css({'color':color});
+});
+$(".relcom_companyname").on("mouseenter", function() {
+var $comid = $(this).data('comid');
+var $comname = $(this).data('comname');
+var $comloc = $(this).data('comloc');
+var $comurl = $(this).data('comurl');
+var $domain = document.location.protocol+"//"+document.location.hostname;
+var $shortcut = 'win';
+var $comtype = $(this).data('comtype');
+if(typeof(s) !== "undefined")
+{
+s.pageName=$shortcut+":firma:"+$comid+" "+$comname.toLowerCase();
+s.pageurl=$domain+$comurl+"/";
+s.channel=$shortcut+":companies:home:chronic"
+s.hier1=s.channel;
+s.eVar1="companies";
+s.prop1="D=v1";
+s.eVar2="companies:home";
+s.prop2="D=v2";
+s.eVar3="companies:home:chronic";
+s.prop3="D=v3";
+s.prop4='';
+s.eVar4='';
+s.eVar11=s.pageName;
+s.prop12='';
+s.eVar16=61;
+s.prop16=61;
+s.eVar17="firma";
+s.prop17="firma";
+s.eVar18=$comid;
+s.prop18=$comid;
+s.prop19='';
+s.prop20='';
+s.prop21="chronic";
+s.prop31='';
+s.prop42='';
+s.prop47='';
+s.visitorID=s.eVar24;
+s.eVar30=s.pageName;
+s.prop32="D=v32";
+s.prop37=$comurl+"/"
+s.list1='';
+// s.t();
+}
+var STR_metatitle = $comname+" in "+$comloc+" | Übersicht";
+var STR_dim4 = '';
+if(typeof($comtype) == "undefined"){var STR_fkentrytypetracking = 'premium'}
+else{var STR_fkentrytypetracking = $comtype;}
+if(typeof(s.channel) != "undefined"){STR_channel = s.channel.substr(s.channel.indexOf(":")+1);}
+if(typeof(s.prop16) != "undefined" && s.prop18 != "undefined"){STR_dim4 = s.prop16 + '_' + s.prop18;}
+ga('set', 'location', s.pageurl);
+ga('set', 'title', STR_metatitle);
+ga('set', 'dimension1', s.pageName);
+ga('set', 'dimension2', STR_channel);
+ga('set', 'dimension3', s.eVar17);
+if(STR_dim4 != ''){ga('set', 'dimension4', STR_dim4);}
+ga('set', 'dimension5', 'none');
+if(typeof(s.eVar24) != "undefined"){ga('set', 'dimension6', s.eVar24);}
+ga('set', 'dimension7', s.prop37);
+ga('set', 'dimension8', 'none');
+ga('set', 'dimension9', s.prop21);
+ga('set', 'dimension10', 'none');
+ga('set', 'dimension11', 'none');
+ga('set', 'dimension13', s.prop18);
+ga('set', 'dimension14', STR_fkentrytypetracking);
+ga('set', 'dimension15', 'none');
+ga('send', 'pageview', s.pageName);
+});
+</script>
+<div class="optionen">
+<!-- Socialmedia Leiste -->
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/socialprivacy.js"></script>
+<div id="art_socialmedia_52" class="social_media_art">
+<ul id="socialmedia_privacy_area" class="socialmedia_privacy_area responsive">
+<li class="socialmedia" id="xing"><button class="xi" data-social-url="https://www.xing-share.com/app/user?op=share;sc_p=xing-share;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F%3Fcmp%3Dsm-x-swyn%26utm_source%3Dxing%26utm_medium%3Dsm%26utm_campaign%3Dxing-swyn" data-social-loader="blank"><img title="Artikel teilen auf Xing" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/xing_128.svg"><span></span><span class="sm-text">share me</span></button></li>
+<li class="socialmedia" id="facebook"><button class="fb" data-social-url="//www.facebook.com/share.php?u=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F%3Fcmp%3Dsm-fb-swyn%26utm_source%3Dfacebook%26utm_medium%3Dsm%26utm_campaign%3Dfacebook-swyn&amp;title=Neural%20Compute%20Stick%202%20beschleunigt%20Deep-Learning-Entwicklungen" data-social-loader="blank"><img title="Artikel teilen auf Facebook" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/facebook_128.svg"><span></span><span class="sm-text">share me</span></button></li>
+<li class="socialmedia" id="twitter"><button class="tw" data-social-url="https://twitter.com/share?url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F%3Fcmp%3Dsm-tw-swyn%26utm_source%3Dtwitter%26utm_medium%3Dsm%26utm_campaign%3Dtwitter-swyn&amp;text=Neural%20Compute%20Stick%202%20beschleunigt%20Deep-Learning-Entwicklungen" data-social-loader="blank"><img title="Artikel teilen auf Twitter" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/twitter_128.svg"><span></span><span class="sm-text">tweet me</span></button></li>
+
+</ul>
+</div>
+<div class="clear"></div>
+<script language="javascript">
+$(document).ready(function() {
+var ARR_sharecountsart_socialmedia_52 = new Array();
+ARR_sharecountsart_socialmedia_52['xing'] = "";
+ARR_sharecountsart_socialmedia_52['facebook'] = "";
+ARR_sharecountsart_socialmedia_52['facebooklike'] = "";
+ARR_sharecountsart_socialmedia_52['twitter'] = "";
+ARR_sharecountsart_socialmedia_52['linkedin'] = "";
+ARR_sharecountsart_socialmedia_52['googleplus'] = "";
+ARR_sharecountsart_socialmedia_52['whatsapp'] = "";
+var ARR_sharetxtart_socialmedia_52 = new Array();
+ARR_sharetxtart_socialmedia_52['xing'] = "share me";
+ARR_sharetxtart_socialmedia_52['facebook'] = "share me";
+ARR_sharetxtart_socialmedia_52['facebooklike'] = "like me";
+ARR_sharetxtart_socialmedia_52['twitter'] = "tweet me";
+ARR_sharetxtart_socialmedia_52['linkedin'] = "share me";
+ARR_sharetxtart_socialmedia_52['googleplus'] = "";
+ARR_sharetxtart_socialmedia_52['whatsapp'] = "share me";
+createSocialBar(
+layout = "responsive",
+links = "window",
+privacy = "0",
+sharecounts = ARR_sharecountsart_socialmedia_52,
+sharetxts = ARR_sharetxtart_socialmedia_52,
+url = "https://www.industry-of-things.de/neural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023/",
+id = "art_socialmedia_52"
+);
+});
+</script>
+<!-- Optionsleiste -->
+<!-- Out of Cache-Include: /modules/bars/dyn_options.cfm -->
+<div id="art_options_52" class="options">
+<ul>
+<li class="option_pdf">
+<a class="" href="https://www.industry-of-things.de/index.cfm?pid=13963&amp;st=pdf&amp;iscontent=10&amp;pk=789023&amp;tab=0&amp;cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D789023%26p%3D1&amp;os=2D5455BB411CEC98F92D927D5649E312" rel="nofollow">
+<img alt="PDF" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/pdf.svg">
+<span>PDF</span>
+</a>
+</li>
+<li class="option_recommend">
+<a class="colorbox_recommend" href="JavaScript:openPopUp(&#39;/index.cfm?pid=13978&amp;pk=789023&amp;ct=10&#39;);" rel="nofollow">
+<img alt="Weiterempfehlen" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/mail.svg">
+<span>Weiterempfehlen</span>
+</a>
+</li>
+<li class="option_print">
+<a class="colorbox_print" href="JavaScript:openPopUp(&#39;/index.cfm?pid=13961&amp;pk=789023&amp;print=true&amp;printtype=article&#39;);" rel="nofollow">
+<img alt="Drucken" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/print.svg">
+<span>Drucken</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div><div class="arkansas"><p class="vortext">Der Neuronale Compute Stick 2 (NCS2) von Intel ist ein USB-Stick, der Funktionen eines neuronalen Netzes nutzbar macht, ohne dass dafür teure Hardware erforderlich ist.</p><p>Die neueste Version von Intels Neural Compute Stick bietet einfachen Zugriff auf leistungsstarke Deep-Learning-Funktionen für Embedded-IoT-Anwendungen und ermöglicht den Einsatz von maschinellem Sehen und künstlicher Intelligenz (<a target="_blank" id="nointelliTXT" class="link_article" href="https://www.industry-of-things.de/ki-aktuelle-projekte-use-cases-und-trends-a-720453/">KI</a>) mit Ihren IoT- und Edge-Geräten. </p><p>Der erst kürzlich vorgestellte Neural Compute Stick 2 (Intel NCS 2) ist über RS Components (RS) erhältlich. Der Distributor nimmt damit einen erschwinglichen, kleinen und lüfterlosen Kernbaustein für die schnelle Umsetzung von Anwendungen zur Bildverarbeitung und Deep-Neural-Network-Konzepten (DNN) ins Sortiment auf.</p><p>Der Neural Compute Stick ist nicht nur auf die wissenschaftliche Auseinandersetzung mit Fragen der Datenverarbeitung und den akademischen Bereich ausgerichtet. Er eignet sich auch für all jene, die maschinelles Sehen und <a target="_blank" id="nointelliTXT" class="link_article" href="https://www.industry-of-things.de/ki-aktuelle-projekte-use-cases-und-trends-a-720453/">künstliche Intelligenz </a>(KI) in ihre Internet of Things (IoT)–Anwendungen integrieren möchten. Erhältlich im praktischen Format eines USB-Sticks bietet der Intel-Spross Vielseitigkeit und ermöglicht Deep-Learning Prototyping auf einem Laptop oder einem anderen Gerät mit USB-Schnittstelle. </p><div class="bannerscrollad">
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_960x600_RX5 img",""); }});
+</script>
+<div id="ban_14092_960x600_RX5" class="banner row2 " style="position:relative;">
+<div id="52_banner_article_scrollad">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_960x600_RX5');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=960x600&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296748&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=366&amp;ady=1058&amp;adk=2776325386&amp;uci=6&amp;ifi=6&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=55&amp;icsg=35200522316459&amp;std=0&amp;csl=129&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=600x0&amp;msz=598x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-6"></script>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4 img",""); }});
+</script>
+<div id="ban_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4" class="banner bannerl 52_banner_article_1_alternative_1543" style="position:relative;">
+<div id="52_banner_article_1">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_150x150_150x151_150x152_150x153_150x154_300x250_300x600_RX4');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=150x150%7C150x151%7C150x152%7C150x153%7C150x154%7C300x250%7C300x600&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296766&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=350&amp;ady=1128&amp;adk=1110067682&amp;uci=7&amp;ifi=7&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=58&amp;icsg=140802089265838&amp;std=0&amp;csl=177&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=600x456&amp;msz=300x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-7"></script>
+</div>
+</div>
+<div id="52_banner_article_1_alternative_1543_wrapper" class="repad 52_banner_article_1_alternative_1543" style="display:none;position:relative;">
+<div class="freddybox nl-singles row1l" id="52_banner_article_1_alternative_1543">
+<img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/nl_icon.png">
+<div class="teaser_titel nl-title">
+Industry of Things
+</div>
+<form id="nl-singles-form-5211543" class="nl-singles-form" method="post" novalidate="novalidate">
+<input type="hidden" name="INT_fkclients" value="52">
+<input type="hidden" name="INT_pknewsletters" value="345">
+<div class="nl-singles-email nl-part">
+<div class="nl-data"><input class="nl-watermark" type="text" name="STR_email" value="Bitte geben Sie eine E-Mail-Adresse ein."></div>
+<div class="clear"></div>
+</div>
+<div class="nl-accept nl-part">
+<input type="checkbox" name="BOO_accept" value="true">
+<span>* Ich bin mit der Verarbeitung und Nutzung meiner Daten gemäß <a href="https://privacy.vogel.de/" target="_blank">Einwilligungserklärung</a> einverstanden.</span>
+</div>
+<div class="captcha" style="margin-left:17px; margin-top:10px;">
+<div>Spamschutz: <input type="text" name="STR_protection" value=""></div>
+<div>Bitte geben Sie das Ergebnis der Rechenaufgabe (Addition) ein.</div>
+<img style="margin-top:0px; right:0px; position:relative;" width="250" height="40" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/captcha_default.png">
+</div>
+<div class="nl-part">
+<input class="button" type="submit" value="Newsletter abonnieren">
+</div>
+</form>
+</div>
+<script type="text/javascript">
+var OBJ_nlsinglesreg_5211543 = {
+validateNlSinglesRegForm: function(STR_formid) {
+$(STR_formid).validate({
+rules: {
+STR_email: {required:true, email:true},
+BOO_accept: {required:true}
+},
+messages: {
+STR_email: {
+required: "<br />Bitte geben Sie eine E-Mail-Adresse ein.",
+email: "<br />Ihre E-Mail-Adresse muss im Format name@domain.de sein."
+},
+BOO_accept: "<br />Bitte stimmen Sie unseren Datenschutz&shy;richtlinien zu."
+},
+errorPlacement: function(OBJ_error, OBJ_element) {
+if(OBJ_element.attr("name") == "BOO_accept") {
+OBJ_error.insertAfter($(STR_formid + " .nl-accept span"));
+} else {
+OBJ_error.insertAfter(OBJ_element);
+}
+},
+onfocusin: function(OBJ_element, OBJ_event) {
+if($(OBJ_element).hasClass("nl-watermark")) {
+$(OBJ_element).val("").removeClass("nl-watermark");
+}
+},
+submitHandler: function() {
+var ARR_arguments = [];
+ARR_arguments["LST_newsletters"] = $(STR_formid + " input[name=INT_pknewsletters]").val();
+ARR_arguments["STR_email"] = $(STR_formid + " input[name=STR_email]").val();
+ARR_arguments["INT_fkclients"] = $(STR_formid + " input[name=INT_fkclients]").val();
+ARR_arguments["STR_error"] = "Bitte wählen Sie mindestens einen Newsletter aus unserem Angebot aus.";
+ARR_arguments["STR_formid"] = STR_formid;
+ARR_arguments["STR_protection"] = $(STR_formid + " input[name=STR_protection]").val();
+var BOO_success = OBJ_nlreg.nlSubscription(ARR_arguments);
+if(BOO_success) {
+$(STR_formid + " input[name=STR_email]").addClass("nl-watermark");
+}
+}
+});
+}
+};
+$(document).ready(function() {
+try {
+OBJ_nlsinglesreg_5211543.validateNlSinglesRegForm("#nl-singles-form-5211543");
+} catch(e) {
+if(window.console && window.console.log) {
+console.log("Error in /singlesregistration/_default.js.->ready: " + e);
+}
+}
+});
+</script>
+</div>
+<p>Intels NCS 2 basiert wie sein Vorgängerprodukt – der 2017 eingeführte Intel Movidius Neural Compute Stick – auf Intels Movidius Vision Processing Unit (VPU). Er setzt jedoch auf die neueste Version: die Intel Movidius Myriad X-VPU, die über einen dedizierten Hardwarebeschleuniger für DNN-Inferenzen verfügt.</p><p>In Kombination mit dem Intel-Toolkit Distribution of OpenVINO, das Deep Learning und maschinelles Sehen besonders unterstützt und Hardwarebeschleunigung bietet, wird der Intel NCS 2 auch zu einem vielseitigen Prototyping- und Entwicklungstool für Anwendungen von nahezu menschlichen Sehfähigkeiten. </p>
+<script type="text/javascript">
+$(document).ready(function(){if (typeof removeDFPSync == 'function'){removeDFPSync("ban_14092_300x251_RX6 img",""); }});
+</script>
+<div id="ban_14092_300x251_RX6" class="banner bannerr txt " style="position:relative;">
+<div id="52_banner_article_2">
+<script type="text/javascript">
+if (typeof googletag != "undefined" && typeof googletag.display != "undefined")
+{
+googletag.display('ban_14092_300x251_RX6');
+}
+</script><script type="text/javascript" src="https://securepubads.g.doubleclick.net/gampad/ads?gdfp_req=1&amp;pvsid=2809511797495900&amp;correlator=1891375261986737&amp;output=json_html&amp;callback=googletag.impl.pubads.setAdContentsBySlotForSync&amp;impl=s&amp;vrg=2019032901&amp;guci=1.2.0.0.2.2.0.0&amp;plat=1%3A32776%2C2%3A32776%2C8%3A32776&amp;sc=1&amp;sfv=1-0-32&amp;iu=%2F2686%2Findustry-of-things.de%2FDE_IOT_Technologie&amp;sz=300x251&amp;cust_params=kw%3Dwallpaper%252CSolidCAM_317509%252CWerLiefertWas_318723%252CUniversity4Industry_2018%252CSchneider_321396%252CMicro-Epsilon_312678_Thema%252CLandesmesseStuttgart_315945%252CEigenwerbungInsider_KI%252CSchneiderElectric_322966%252C323389_Alcatel%252CAlcatelLucent_323389%252CInnovation_318552_UCC%252C326918_internetofthings%252Crittal_327655%252CBDI_KuenstlicheIntelligenz%252CIBM_329105&amp;cookie_enabled=1&amp;bc=15&amp;abxe=1&amp;lmt=1554397296&amp;dt=1554397296785&amp;dlt=1554397296126&amp;idt=255&amp;frm=20&amp;biw=1280&amp;bih=666&amp;oid=3&amp;adx=650&amp;ady=1340&amp;adk=970291855&amp;uci=8&amp;ifi=8&amp;u_tz=120&amp;u_his=12&amp;u_h=800&amp;u_w=1280&amp;u_ah=777&amp;u_aw=1280&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;u_sd=2&amp;flash=0&amp;url=https%3A%2F%2Fwww.industry-of-things.de%2Fneural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023%2F&amp;ref=https%3A%2F%2Fwww.industry-of-things.de%2Fcontentlisting%2F429365%2F1521%2F14058%2Fp%2F11%2F&amp;dssz=62&amp;icsg=563208357063354&amp;std=0&amp;csl=129&amp;vis=1&amp;dmc=8&amp;scr_x=0&amp;scr_y=0&amp;psz=600x720&amp;msz=300x0&amp;ga_vid=516409072.1554397297&amp;ga_sid=1554397297&amp;ga_hid=1002415188&amp;fws=0" id="sae-script-8"></script>
+</div>
+</div>
+<p>Die Kombination des Intel NCS 2 und des über Intel distribuierten OpenVINO Toolkit ermöglicht einen schnellen Entwicklungszyklus: Vom Prototyping geschulter DNNs auf dem Compute Stick über die einfache Portierung von DNNs bis hin zu einem auf Intel Movidius VPU basierenden Embedded-Gerät oder -System sind höchstens minimale Codeänderungen erforderlich. Der Intel NCS 2 unterstützt auch die beliebten Open-Source-Softwarebibliotheken Caffe und TensorFlow DNN.</p><p>Dieser Beitrag erschien ursprünglich bei den Kollegen von Elektronik Praxis.</p></div></div>
+<footer>
+<section>
+<div class="authorbox" id="art_authorinfo_52">
+<div class="a-info">
+<a href="https://www.industry-of-things.de/margit-kuther/">
+<img class="a-img" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/4.jpg" alt="Margit Kuther">
+</a>
+<div class="a-person">
+<span class="a-about">Über den Autor</span>
+<a href="https://www.industry-of-things.de/margit-kuther/"><p class="a-title">Margit Kuther</p></a>
+<a href="https://www.industry-of-things.de/margit-kuther/"><p class="a-name">Redakteur</p></a>
+</div>
+<div class="a-social">
+<a href="https://twitter.com/MargitKuther" target="_blank"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/twitter.png"></a>
+<a href="https://www.xing.com/profile/Margit_Kuther" target="_blank"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/xing.png"></a>
+</div>
+</div>
+<div class="a-bestarticle">
+<a class="a-name" href="https://www.industry-of-things.de/raspberry-pi-a-bis-zero-alle-14-modelle-im-ueberblick-a-699137/">Überblick</a>
+<a class="a-title" href="https://www.industry-of-things.de/raspberry-pi-a-bis-zero-alle-14-modelle-im-ueberblick-a-699137/">Raspberry Pi A bis Zero: alle 14 Modelle im Überblick</a>
+</div>
+<div class="clear"></div>
+</div>
+</section>
+<section>
+<!--Kommentarbox -->
+<!-- Out of Cache-Include: /modules/teasers/forum/dyn_comments.cfm -->
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/ckeditor.js"></script>
+<script type="text/javascript" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/jquery.js"></script>
+<div class="clear"></div>
+<div class="kommentare" id="art_comments_52">
+<div class="comment-loading-init" data-bind="visible: !initialized" style="display: none;">
+<i class="icon ion-load-c spin" style="font-size:96px;"></i>
+<p>Kommentare werden geladen....	</p>
+</div>
+<div class="boxhead_bg">Kommentar zu diesem Artikel abgeben</div>
+<div style="display:none">
+<div class="comment-alert" style="margin:10px;">
+<p>Der Kommentar wird durch einen Redakteur geprüft und in Kürze freigeschaltet.</p>
+<input type="button" class="commentbutton" value="Ok" onclick="$.colorbox.close()" style="margin-top: 20px;width:125px;">
+</div>
+</div>
+<form name="commentform" id="commentform" style="position:relative">
+<div class="formoverlay"><i class="icon ion-load-c spin" style="font-size:96px;"></i></div>
+<div class="userinfo" style="height:auto;">
+<p>Anonym mitdiskutieren oder einloggen <a class="button" href="https://www.industry-of-things.de/index.cfm?pid=13963&amp;tab=0&amp;cf=%2Findex%2Ecfm%3Fpid%3D1%26pk%3D789023%26p%3D1&amp;os=2D5455BB411CEC98F92D927D5649E312">Anmelden</a></p>
+<img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/user_default.jpg" alt="Avatar" class="comment-avatar-preview">
+<input type="text" name="username" id="username" placeholder="Name eingeben...">
+<div class="clear"></div>
+</div>
+<textarea name="comment" id="comment" style="height: 100px; width: 100%; visibility: hidden; display: none;"></textarea><div id="cke_comment" class="cke_1 cke cke_reset cke_chrome cke_editor_comment cke_ltr cke_browser_webkit cke_hidpi" dir="ltr" lang="de" role="application" aria-labelledby="cke_comment_arialbl"><span id="cke_comment_arialbl" class="cke_voice_label">WYSIWYG-Editor, comment</span><div class="cke_inner cke_reset" role="presentation"><span id="cke_1_top" class="cke_top cke_reset_all" role="presentation" style="height: auto; user-select: none;"><span id="cke_7" class="cke_voice_label">Editor Werkzeugleisten</span><span id="cke_1_toolbox" class="cke_toolbox" role="group" aria-labelledby="cke_7" onmousedown="return false;"><span id="cke_8" class="cke_toolbar" aria-labelledby="cke_8_label" role="toolbar"><span id="cke_8_label" class="cke_voice_label">Grundstile</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_9" class="cke_button cke_button__bold cke_button_off" href="javascript:void(&#39;Fett&#39;)" title="Fett" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_9_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(0,event);" onfocus="return CKEDITOR.tools.callFunction(1,event);" onclick="CKEDITOR.tools.callFunction(2,this);return false;"><span class="cke_button_icon cke_button__bold_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -24px;background-size:16px;">&nbsp;</span><span id="cke_9_label" class="cke_button_label cke_button__bold_label" aria-hidden="false">Fett</span></a><a id="cke_10" class="cke_button cke_button__italic cke_button_off" href="javascript:void(&#39;Kursiv&#39;)" title="Kursiv" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_10_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(3,event);" onfocus="return CKEDITOR.tools.callFunction(4,event);" onclick="CKEDITOR.tools.callFunction(5,this);return false;"><span class="cke_button_icon cke_button__italic_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -48px;background-size:16px;">&nbsp;</span><span id="cke_10_label" class="cke_button_label cke_button__italic_label" aria-hidden="false">Kursiv</span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_11" class="cke_toolbar" aria-labelledby="cke_11_label" role="toolbar"><span id="cke_11_label" class="cke_voice_label">Absatz</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_12" class="cke_button cke_button__numberedlist cke_button_off" href="javascript:void(&#39;Nummerierte Liste einfügen/entfernen&#39;)" title="Nummerierte Liste einfügen/entfernen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_12_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(6,event);" onfocus="return CKEDITOR.tools.callFunction(7,event);" onclick="CKEDITOR.tools.callFunction(8,this);return false;"><span class="cke_button_icon cke_button__numberedlist_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -576px;background-size:16px;">&nbsp;</span><span id="cke_12_label" class="cke_button_label cke_button__numberedlist_label" aria-hidden="false">Nummerierte Liste einfügen/entfernen</span></a><a id="cke_13" class="cke_button cke_button__bulletedlist cke_button_off" href="javascript:void(&#39;Liste&#39;)" title="Liste" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_13_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(9,event);" onfocus="return CKEDITOR.tools.callFunction(10,event);" onclick="CKEDITOR.tools.callFunction(11,this);return false;"><span class="cke_button_icon cke_button__bulletedlist_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -528px;background-size:16px;">&nbsp;</span><span id="cke_13_label" class="cke_button_label cke_button__bulletedlist_label" aria-hidden="false">Liste</span></a><span class="cke_toolbar_separator" role="separator"></span><a id="cke_14" class="cke_button cke_button__smiley cke_button_off" href="javascript:void(&#39;Smiley&#39;)" title="Smiley" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_14_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(12,event);" onfocus="return CKEDITOR.tools.callFunction(13,event);" onclick="CKEDITOR.tools.callFunction(14,this);return false;"><span class="cke_button_icon cke_button__smiley_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/smiley/icons/hidpi/smiley.png?t=F7J9);background-position:0 0px;background-size:16px;">&nbsp;</span><span id="cke_14_label" class="cke_button_label cke_button__smiley_label" aria-hidden="false">Smiley</span></a></span><span class="cke_toolbar_end"></span></span><span id="cke_15" class="cke_toolbar" aria-labelledby="cke_15_label" role="toolbar"><span id="cke_15_label" class="cke_voice_label">Links</span><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><a id="cke_16" class="cke_button cke_button__link cke_button_off" href="javascript:void(&#39;Link einfügen/editieren&#39;)" title="Link einfügen/editieren" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_16_label" aria-haspopup="false" onkeydown="return CKEDITOR.tools.callFunction(15,event);" onfocus="return CKEDITOR.tools.callFunction(16,event);" onclick="CKEDITOR.tools.callFunction(17,this);return false;"><span class="cke_button_icon cke_button__link_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -456px;background-size:16px;">&nbsp;</span><span id="cke_16_label" class="cke_button_label cke_button__link_label" aria-hidden="false">Link einfügen/editieren</span></a><a id="cke_17" class="cke_button cke_button__unlink cke_button_disabled " href="javascript:void(&#39;Link entfernen&#39;)" title="Link entfernen" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_17_label" aria-haspopup="false" aria-disabled="true" onkeydown="return CKEDITOR.tools.callFunction(18,event);" onfocus="return CKEDITOR.tools.callFunction(19,event);" onclick="CKEDITOR.tools.callFunction(20,this);return false;"><span class="cke_button_icon cke_button__unlink_icon" style="background-image:url(https://files.vogel.de/shared/lib/ckeditor/4.5.3/plugins/icons_hidpi.png?t=F7J9);background-position:0 -480px;background-size:16px;">&nbsp;</span><span id="cke_17_label" class="cke_button_label cke_button__unlink_label" aria-hidden="false">Link entfernen</span></a></span><span class="cke_toolbar_end"></span></span></span></span><div id="cke_1_contents" class="cke_contents cke_reset" role="presentation" style="height: 200px;"><iframe src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/saved_resource.html" frameborder="0" class="cke_wysiwyg_frame cke_reset" style="width: 100%; height: 100%;" title="WYSIWYG-Editor, comment" tabindex="0" allowtransparency="true"></iframe></div><span id="cke_1_bottom" class="cke_bottom cke_reset_all" role="presentation" style="user-select: none;"><div class="cke_wordcount" style="" title="Statistik"><span id="cke_wordcount_comment" class="cke_path_item">Zeichen: 0/1500</span></div></span></div></div>
+<div class="dsgvo_hint">
+Zur Wahrung unserer Interessen speichern wir zusätzlich zu den o.g. Informationen die IP-Adresse. Dies dient ausschließlich dem Zweck, dass Sie als Urheber des Kommentars identifiziert werden können. Rechtliche Grundlage ist die Wahrung berechtigter Interessen gem. Art 6 Abs 1 lit. f) DSGVO.
+</div>
+<input type="button" value="Kommentieren" id="postbutton">
+</form>
+<form name="commentform-answer" id="commentform-answer" style="display:none">
+<div class="formoverlay"><i class="icon ion-load-c spin" style="font-size:96px;"></i></div>
+<div class="userinfo">
+<img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/user_default.jpg" alt="Avatar" class="comment-avatar-preview">
+<input type="text" name="username" id="username-answer" placeholder="Name eingeben...">
+</div>
+<input type="hidden" name="relatedPost" id="relatedPost">
+<textarea name="comment" id="commentanswertext" style="height:100px; width:100%"></textarea>
+<div class="dsgvo_hint">
+Zur Wahrung unserer Interessen speichern wir zusätzlich zu den o.g. Informationen die IP-Adresse. Dies dient ausschließlich dem Zweck, dass Sie als Urheber des Kommentars identifiziert werden können. Rechtliche Grundlage ist die Wahrung berechtigter Interessen gem. Art 6 Abs 1 lit. f) DSGVO.
+</div>
+<input type="button" value="Kommentieren" id="postbutton-answer">
+</form>
+<div id="comments" data-bind="visible:comments().length &gt; 0" style="display: none;">
+<ol class="comment-list" data-bind="foreach: {data:comments, afterRender:checkOverflow}"></ol>
+</div>
+<div class="comment-more" data-bind="if: hasMore"></div>
+<div id="comment-loading" data-bind="visible: commentsLoading" style="display: none;">
+<i class="icon ion-load-c spin" style="font-size:96px;"></i>
+<p>Kommentare werden geladen....	</p>
+</div>
+<div style="display:none">
+<div id="comment-report-dialog">
+<h2>Kommentar melden</h2>
+<p>Melden Sie diesen Kommentar, wenn dieser nicht den Richtlinien entspricht.</p>
+<form>
+<input type="hidden" name="id" id="comment-report-id">
+<textarea rows="5" id="comment-report-text" name="report_text"></textarea>
+<input type="button" class="commentbutton" value="Senden" id="comment-report-send">
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<div style="display:none">
+<div id="comment-approve-dialog" style="margin:10px;">
+<h2>Kommentar Freigeben</h2>
+<p style="color:red;display:none" id="warning-unregistered-approve">unregistrierter Nutzer</p>
+<form>
+<div id="mailform_approve">
+<p> Der untenstehende Text wird an den Kommentator gesendet, falls dieser eine Email-hinterlegt hat.</p>
+<div class="form-group">
+<label>Betreff</label>
+<input type="text" id="comment-approve-subject" name="subject" value="Benachrichtigung zu ihrem Kommentar" style="width: 100%;font-size: 1em;">
+</div>
+<div class="form-group">
+<label>Text</label>
+<div contenteditable="true" style="width:100%;height:200px;border:1px solid black;overflow-y: scroll;" id="textdiv_approve"></div>
+</div>
+</div>
+<input type="button" class="commentbutton" value="Freigeben" id="comment-approve-send" style="margin-top:5px;">
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<div style="display:none">
+<div id="comment-unapprove-dialog" style="margin:10px;">
+<h2>Freigabe entfernen</h2>
+<p style="color:red;display:none" id="warning-unregistered-unapprove">unregistrierter Nutzer</p>
+<form>
+<div id="mailform_unapprove">
+<p>Der untenstehende Text wird an den Kommentator gesendet, falls dieser eine Email-hinterlegt hat.</p>
+<div class="form-group">
+<label>Betreff</label>
+<input type="text" id="comment-unapprove-subject" name="subject" value="Benachrichtigung zu ihrem Kommentar" style="width: 100%;font-size: 1em;">
+</div>
+<div class="form-group">
+<label>Text</label>
+<div contenteditable="true" style="width:100%;height:200px;border:1px solid black;overflow-y: scroll;" id="textdiv_unapprove"></div>
+</div>
+</div>
+<input type="button" class="commentbutton" value="Freigabe entfernen" id="comment-unapprove-send" style="margin-top:5px;">
+</form>
+<div class="clear"></div>
+</div>
+</div>
+<script>
+var lang ={
+collapse: "Einklappen",
+expand: "Ausklappen"
+}
+var config = {
+sortsetting:'latest',
+sort:'created',
+sortorder:'desc',
+check :'058266c46aee41ef16784f1bfac600112b126e48',
+STR_token : '',
+BOO_approveByAdmin: false,
+articleid:789023,
+useruuid: '',
+number:15,
+LST_commentlikes:"",
+length:1500,
+BOO_cutoff:false,
+BOO_commentsAllowed:true,
+BOO_admin:false,
+approved:1,
+clientemail:'iot@vogel.de'
+}
+var comment = {
+approved : true,
+userinfo : {
+useruuid : ""
+},
+articleinfo:{
+pkarticles:789023,
+articlenumber:"45681732",
+articletitle : "Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen",
+articlelink:"http://www.industry-of-things.de/neural-compute-stick-2-beschleunigt-deep-learning-entwicklungen-a-789023/"
+},
+clientinfo:{
+client:52,
+clientname:"Industry of Things"
+},
+contenttype:"comment"
+}
+/*Nur mit Kommentarmodul einsetzbar*/
+/*/uxmodules/teasers/forum/comments.cfm (Auswahl neues Kommentarmodul) */
+/* Config CKE */
+/* Felder die zurückgeliefert werden sollen */
+/* var commentFields = 'pkarticles,approved,articlenumber,id,user,userimagepath,username,useruuid,userlink,created,comment,mod,modmodified,subcomments,likes,dislikes,articletitle,articlelink,relatedComment,modified,mod'; */
+var ckeditorConfig = {
+toolbar: "comment",
+wordcount: {
+/* Whether or not you want to show the Paragraphs Count*/
+showParagraphs: false,
+/* Whether or not you want to show the Word Count*/
+showWordCount: false,
+/* Whether or not you want to show the Char Count*/
+showCharCount: true,
+/* Whether or not you want to count Spaces as Chars*/
+countSpacesAsChars: true,
+/* Whether or not to include Html chars in the Char Count*/
+countHTML: false,
+/* Maximum allowed Word Count, -1 is default for unlimited*/
+maxWordCount: -1,
+/* Maximum allowed Char Count, -1 is default for unlimited */
+maxCharCount: config.length
+},
+startupFocus: false
+};
+/* View Model Kommentar für Knockout EIN KOMMENTAR */
+var CommentViewModel = function (data) {
+var commentMapping = {};
+ko.mapping.fromJS(data, commentMapping, this);
+/* Referenz auf sich selbst anlegen */
+var self = this;
+/*Links bearbeiten
+*
+* Beim initialisieren werden alle Links mit target="_blank" versehen;
+* */
+var commentHtml = $('<div>'+self.comment()+'</div>');
+commentHtml.find('a').each(function(){
+$(this).prop("target",'_blank');
+self.comment(commentHtml.html());
+});
+/* Like Funktion */
+self.like = function (obj) {
+if (!obj.hasClass("inactive")) {
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/like/up/",
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function (data) {
+self.likes(data.likes);
+obj.closest(".comment-actions").find(".like").addClass("inactive");
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+/* DisLike Funktion */
+self.dislike = function (obj) {
+if (!obj.hasClass("inactive")) {
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/like/down/",
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function (data) {
+self.dislikes(data.dislikes);
+obj.closest(".comment-actions").find(".like").addClass("inactive");
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+/* Bearbeiten Funktion Editor öffnen und mit Content befüllen */
+self.showEdit = function (obj) {
+if (obj.hasClass("active")) {
+$("#commentform-edit").hide();
+$(".kommentare button").removeClass("active");
+}
+else {
+$(".kommentare button").removeClass("active");
+obj.addClass("active");
+$("#commentform-answer").hide();
+if (typeof (CKEDITOR.instances.commentedittext) !== 'undefined') {
+CKEDITOR.instances.commentedittext.destroy();
+};
+CKEDITOR.on('instanceReady', function () {
+getUsers(CKEDITOR.instances.commentedittext);
+});
+obj.closest(".comment-actions").after($("#commentform-edit"));
+$("#commentform-edit").show();
+CKEDITOR.replace('commentedittext', ckeditorConfig);
+CKEDITOR.instances.commentedittext.setData(self.comment());
+CKEDITOR.instances.commentedittext.on('focus', function () {
+$("#cke_commentedittext").removeClass("invalid");
+});
+/**/
+$("#postbutton-edit").off("click");
+$("#postbutton-edit").click(function () {
+var STR_comment = CKEDITOR.instances.commentedittext.getData();
+if ($.trim(STR_comment).length == 0) {
+$("#cke_commentedittext").addClass("invalid");
+}
+if ($.trim(STR_comment).length > 0) {
+$(".kommentare button").removeClass("active");
+$("#commentform-edit").hide();
+self.update();
+}
+});
+}
+};
+self.update = function () {
+$("#commentform-edit").find(".formoverlay").show();
+self.comment(CKEDITOR.instances.commentedittext.getData());
+var parsedComment = "<div>" + self.comment + "</div>";
+var ARR_mentions = [];
+$(parsedComment).find("a.mention").each(function () {
+ARR_mentions.push($(this).prop("rel"));
+});
+$.ajax({
+type: "PUT",
+cache: false,
+url: "/api/comments/" + self.id() + "/",
+data: JSON.stringify({
+data: ko.mapping.toJS(self),
+token: config.STR_token,
+mentions: ARR_mentions,
+sort: config.sort,
+sortorder: config.sortorder,
+check: config.check,
+mod: false,
+usermodified: true
+}),
+dataType: "text",
+contentType: "application/json; charset=utf-8",
+success: function (data) {
+data = jQuery.parseJSON(data);
+$("#commentform-edit").find(".formoverlay").hide();
+if (data.id !== null && typeof (data.id) !== 'undefined') {
+if (config.BOO_approveByAdmin) {
+var $content = $(".comment-alert");
+$.colorbox({
+inline: true,
+href:$content,
+width: "40%",
+overlayClose: true,
+opacity: 0.9
+});
+setTimeout(function () {
+$.colorbox.close();
+}, 10000);
+}
+else {
+self.usermodified(data.usermodified);
+}
+}
+else {
+alert("Kommentar wurde nicht aktualisiert!");
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim aktualisieren!");
+console.log(errMsg);
+}
+});
+};
+/**/
+self.showAnswer = function (obj) {
+if (obj.hasClass("active")) {
+$("#commentform-answer").hide();
+$(".kommentare button").removeClass("active");
+}
+else {
+$(".kommentare button").removeClass("active");
+obj.addClass("active");
+if (typeof (CKEDITOR.instances.commentanswertext) !== 'undefined') {
+CKEDITOR.instances.commentanswertext.destroy();
+};
+CKEDITOR.on('instanceReady', function () {
+getUsers(CKEDITOR.instances.commentanswertext);
+});
+$("#commentform-edit").hide();
+obj.closest(".comment-actions").after($("#commentform-answer"));
+$("#relatedPost").val(self.id());
+$("#commentform-answer").show();
+CKEDITOR.replace('commentanswertext', ckeditorConfig);
+CKEDITOR.instances.commentanswertext.setData("");
+CKEDITOR.instances.commentanswertext.on('focus', function () {
+$("#cke_commentanswertext").removeClass("invalid");
+});
+$("#username-answer").on("focus", function () {
+$("#username-answer").removeClass("invalid");
+});
+}
+};
+self.report = function () {
+/**/
+$("#comment-report-id").val(self.id());
+/**/
+$.colorbox({
+inline: true, href: "#comment-report-dialog", width: "450px", overlayClose: false, onClosed: function () {
+$("#comment-report-id").val("");
+$("#comment-report-text").val("");
+}
+});
+/**/
+$("#comment-report-send").off("click");
+$("#comment-report-send").click(function () {
+var STR_message = $("#comment-report-text").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/report/",
+data: JSON.stringify({
+data: ko.mapping.toJS(self),
+message: STR_message,
+token: config.STR_token
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+self.approve = function () {
+var txt = "Hallo " + self.userinfo.username() + ",<br/><br/>" +
+"Ihr Kommentar zum Artikel <a href='" + self.articleinfo.articlelink() + "'>" + self.articleinfo.articletitle() + "</a> wurde freigegeben!<br/><br/>" +
+"Vielen Dank für Ihr Engagement auf " + self.clientinfo.clientname() + "<br/><br/>" +
+"Liebe Grüße,<br/>" +
+"das '" + self.clientinfo.clientname() + "' Team";
+$("#textdiv_approve").html(txt);
+/**/
+$.colorbox({
+inline: true, href: "#comment-approve-dialog", width: "450px", transition: "elastic", overlayClose: false, onClosed: function () {
+$("#textdiv_approve").html("");
+}
+});
+if(self.userinfo.useruuid().length > 0){
+$("#warning-unregistered-approve").hide();
+$("#mailform_approve").show();
+$.colorbox.resize();
+}
+else{
+$("#warning-unregistered-approve").show();
+$("#mailform_approve").hide();
+$.colorbox.resize();
+}
+/**/
+$("#comment-approve-send").off("click");
+$("#comment-approve-send").click(function () {
+var STR_message = $("#textdiv_approve").html();
+var STR_subject = $("#comment-approve-subject").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/approve/",
+data: JSON.stringify({
+message: STR_message,
+subject: STR_subject
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+location.reload();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+self.unapprove = function () {
+var txt = 'Hallo ' + self.userinfo.username() + ', <br/><br/>Ihr Kommentar zum Artikel <a href="' + self.articleinfo.articlelink() + '">' +
+self.articleinfo.articletitle() + '</a> hat leider nicht unseren Richtlinien entsprochen und wurde von unserem Team aktualisiert!<br/><br/>' +
+'Falls Sie Fragen zu unseren Kommentar-Richtlinien haben, schreiben Sie uns einfach eine <a href="mailto: ' + config.clientemail + '">Mail</a><br/><br/>' +
+'Liebe Grüße,<br/> das ' + self.clientinfo.clientname() + ' Team';
+$("#textdiv_unapprove").html(txt);
+/**/
+$.colorbox({
+inline: true, href: "#comment-unapprove-dialog", width: "450px", transition: "elastic", overlayClose: false, onClosed: function () {
+$("#textdiv_unapprove").html("");
+}
+});
+if(self.userinfo.useruuid().length > 0){
+$("#warning-unregistered-unapprove").hide();
+$("#mailform_unapprove").show();
+$.colorbox.resize();
+}
+else{
+$("#warning-unregistered-unapprove").show();
+$("#mailform_unapprove").hide();
+$.colorbox.resize();
+}
+/**/
+$("#comment-unapprove-send").off("click");
+$("#comment-unapprove-send").click(function () {
+var STR_message = $("#textdiv_unapprove").html();
+var STR_subject = $("#comment-unapprove-subject").val();
+$.ajax({
+type: "POST",
+cache: false,
+url: "/api/comments/" + self.id() + "/unapprove/",
+data: JSON.stringify({
+message: STR_message,
+subject: STR_subject
+}),
+dataType: "json",
+success: function (data) {
+$.colorbox.close();
+location.reload();
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+});
+};
+}
+/* View Model KOMMENTARMODUL */
+var ViewModel = function () {
+var self = this;
+self.initialized = ko.observable(false);
+self.commentsLoading = ko.observable(false);
+self.cutoff = config.BOO_cutoff;
+self.commentUsers = null;
+self.commentLikes = config.LST_commentlikes;
+self.loggedUserId = ko.observable(config.useruuid);
+self.from = ko.observable(0);
+self.count = ko.observable(config.number);
+self.totalHits = ko.observable(0);
+self.comments = ko.observableArray([]);
+self.hasMore = ko.observable(false);
+self.hasSubscription = ko.observable(false);
+/* Check ob ein Overflow innerhalb des Contents vorliegt*/
+self.checkOverflow = function (element, index, data) {
+var content = $(element).find(".comment-content").first();
+if (content.prop('scrollHeight') > content.height()) {
+content.addClass("expandable");
+}
+else {
+content.addClass("complete");
+$(element).find(".comment-actions .expander").hide();
+$(element).find(".comment-expand").hide();
+}
+};
+self.addComment = function (STR_id, OBJ_comment) {
+if (STR_id !== null && STR_id.length > 0) {
+/* Subkommentar */
+for (x = 0; x < this.comments().length; x++) {
+if (this.comments()[x].id() == STR_id) {
+/*Subkommentar anhängen*/
+this.comments()[x].subcomments.push(OBJ_comment);
+}
+}
+}
+else {
+if (config.sortsetting.indexOf('oldest') > -1 || config.sortsetting.indexOf('top') > -1) {
+this.comments.push(OBJ_comment);
+}
+else {
+this.comments.unshift(OBJ_comment);
+}
+if (this.comments().length > 0) {
+$("#comments").fadeIn();
+}
+}
+};
+self.getComments = function () {
+self.commentsLoading(true);
+$.ajax({
+type: "GET",
+cache: false,
+url: "/api/comments/article/" + config.articleid + "/",
+data: { token: config.STR_token, sort: config.sort, sortorder: config.sortorder, count: self.count(), from: self.from(), uid: config.useruuid, approved: config.approved },
+dataType: "json",
+success: function (commentsfromserver) {
+/*Ladebilder ausblenden*/
+self.commentsLoading(false);
+self.initialized(true);
+if (commentsfromserver.data.length > 0) {
+for (x = 0; x < commentsfromserver.data.length; x++) {
+for (i = 0; i < commentsfromserver.data[x].subcomments.length; i++) {
+/*
+* Subkommentare
+* initialisieren
+*/
+commentsfromserver.data[x].subcomments[i] = new CommentViewModel(commentsfromserver.data[x].subcomments[i]);
+}
+/* Subkommentare immer alt nach neu sortieren sortieren */
+commentsfromserver.data[x].subcomments.sort(function (a, b) { ; return new Date(a.created()) - new Date(b.created()) });
+/* kommentar initialisieren */
+self.comments.push(new CommentViewModel(commentsfromserver.data[x]));
+}
+self.totalHits(commentsfromserver.metainfo.totalHits);
+self.hasMore(commentsfromserver.metainfo.hasMore);
+self.from(self.from() + commentsfromserver.data.length);
+}
+},
+failure: function (errMsg) {
+self.commentsLoading(false);
+console.log(errMsg);
+}
+});
+};
+self.postComment = function (comment, subscribe, overlay) {
+overlay.show();
+var parsedComment = "<div>" + comment.comment + "</div>";
+var ARR_mentions = [];
+$(parsedComment).find("a.mention").each(function () {
+ARR_mentions.push($(this).prop("rel"));
+});
+$.ajax({
+type: "POST",
+url: "/api/comments/",
+cache: false,
+data: JSON.stringify({
+data: comment,
+mentions: ARR_mentions,
+token: config.STR_token,
+sort: config.sort,
+sortorder: config.sortorder,
+check: config.check
+}),
+dataType: "text",
+contentType: "application/json; charset=utf-8",
+success: function (data) {
+data = jQuery.parseJSON(data);
+overlay.hide();
+$(".kommentare button").removeClass("active");
+if (data.id !== null && typeof (data.id) !== 'undefined') {
+if (config.BOO_approveByAdmin) {
+var $content = $(".comment-alert");
+$.colorbox({
+inline: true,
+href:$content,
+width: "40%",
+overlayClose: true,
+opacity: 0.9
+});
+setTimeout(function () {
+$.colorbox.close();
+}, 10000);
+}
+else {
+self.addComment(data.relatedComment, new CommentViewModel(data));
+/*Subscribers benachrichtigen über neue Nachricht */
+self.notifySubscribers();
+}
+/* Subscribe */
+if (subscribe && !self.hasSubscription()) {
+self.subscribe(comment);
+}
+}
+else {
+alert("Kommentar wurde nicht angelegt!");
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim anlegen!");
+console.log(errMsg);
+}
+});
+};
+self.expandContent = function (obj) {
+if (obj.closest('.comment-item').find('.comment-content').hasClass("expandable")) {
+var content = obj.closest('.comment-item').find('.comment-content').first();
+content.toggleClass('expanded');
+if (content.hasClass("expanded")) {
+obj.text(lang.collapse);
+} else {
+obj.text(lang.expand);
+}
+}
+return true;
+};
+self.subscribe = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/subscribe/",
+cache: false,
+data: JSON.stringify({
+useruuid: config.useruuid,
+token: config.STR_token,
+articleinfo: comment.articleinfo,
+clientinfo: comment.clientinfo
+}),
+dataType: "json",
+success: function (data) {
+if (data.result) {
+self.hasSubscription(true);
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim Abonnnieren!");
+console.log(errMsg);
+}
+});
+}
+self.unsubscribe = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/unsubscribe/",
+cache: false,
+data: JSON.stringify({
+useruuid: config.useruuid,
+token: config.STR_token
+}),
+dataType: "json",
+success: function (data) {
+if (data.result) {
+self.hasSubscription(false);
+}
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+}
+self.checkSubscription = function () {
+$.ajax({
+type: "GET",
+url: "/api/comments/article/" + config.articleid + "/checksubscription/",
+cache: false,
+data: { useruuid: config.useruuid, token: config.STR_token },
+dataType: "json",
+success: function (data) {
+self.hasSubscription(data.result);
+},
+failure: function (errMsg) {
+alert("Fehler beim Senden!");
+console.log(errMsg);
+}
+});
+};
+self.notifySubscribers = function () {
+$.ajax({
+type: "POST",
+url: "/api/comments/article/" + config.articleid + "/notifysubscribers/",
+cache: false,
+data: JSON.stringify({ token: config.STR_token }),
+dataType: "json",
+success: function () { },
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+}
+/*Users mit Null initialisieren, um in getUsers darauf prüfen zu können*/
+var commentUsers = null;
+var getUsers = function (OBJ_ckeditor) {
+/**/
+if (commentUsers != null) {
+OBJ_ckeditor.execCommand('reloadSuggestionBox', commentUsers);
+}
+else {
+$.ajax({
+type: "GET",
+cache: false,
+url: "/api/comments/article/" + config.articleid + "/users/",
+data: { token: config.STR_token },
+dataType: "json",
+success: function (users) {
+commentUsers = users.data;
+OBJ_ckeditor.execCommand('reloadSuggestionBox', commentUsers);
+},
+failure: function (errMsg) {
+console.log(errMsg);
+}
+});
+}
+};
+$(document).ready(function () {
+/* ViewModel initialisieren */
+var viewModel = new ViewModel();
+if (config.BOO_commentsAllowed) {
+/* CKEditor initialisieren */
+/* TriggerKey == @ */
+CKEDITOR.replace('comment', ckeditorConfig);
+CKEDITOR.instances.comment.on('focus', function () {
+$("#cke_comment").removeClass("invalid");
+/* Users laden*/
+getUsers(CKEDITOR.instances.comment);
+});
+CKEDITOR.disableAutoInline = true;
+$("#username").on("focus", function () {
+$("#username").removeClass("invalid");
+});
+$("#comment-report-text").on("focus", function () {
+$("#comment-report-text").removeClass("invalid");
+});
+$("#postbutton").click(function () {
+comment["comment"] = CKEDITOR.instances.comment.getData();
+comment["userinfo"]["username"] = $("#username").val();
+comment["relatedComment"] = "";
+var subscribe = $("#subscribe").prop("checked");
+var valid = true;
+if ($.trim(comment["comment"]).length == 0) {
+$("#cke_comment").addClass("invalid");
+valid = false;
+}
+if ($.trim(comment["userinfo"]["username"]).length == 0) {
+$("#username").addClass("invalid");
+valid = false;
+}
+if (valid) {
+var form = $("#commentform");
+CKEDITOR.instances.comment.setData("");
+var overlay = $("#commentform").find(".formoverlay");
+viewModel.postComment(comment, subscribe, overlay);
+}
+});
+$("#postbutton-answer").click(function () {
+comment["comment"] = CKEDITOR.instances.commentanswertext.getData();
+comment["userinfo"]["username"] = $("#username-answer").val();
+comment["relatedComment"] = $("#relatedPost").val();
+var subscribe = $("#subscribe-answer").prop("checked");
+var valid = true;
+if ($.trim(comment["comment"]).length == 0) {
+$("#cke_commentanswertext").addClass("invalid");
+valid = false;
+}
+if ($.trim(comment["userinfo"]["username"]).length == 0) {
+$("#username-answer").addClass("invalid");
+valid = false;
+}
+if (valid) {
+$("#commentform-answer").hide();
+CKEDITOR.instances.commentanswertext.setData("");
+var overlay = $("#commentform-answer").find(".formoverlay");
+viewModel.postComment(comment, subscribe, overlay);
+}
+});
+}
+/*Data-Binding herstellen*/
+ko.applyBindings(viewModel);
+/*Kommentare laden*/
+viewModel.getComments();
+if (config.useruuid.length > 0) {
+/*Prüfen ob Thread abonniert wurde*/
+viewModel.checkSubscription();
+}
+});
+</script>
+</div>
+<div class="clear"></div>
+</section>
+<img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/edd88884717e4f0986ee07f3f0c9717e" height="1" width="1" border="0">
+<script type="text/javascript">
+var STR_authornames = 'Kuther:Margit';
+var STR_authornames_globaluserids = '532504:Kuther:Margit';
+var STR_globaluserids = '532504';
+var STR_shorturl = "";
+//Wenn mobile device unter 700 dann wird das inlineimage vergrößert
+if ($("body").width() < 701 )
+{
+$('.inlineimage img').each(function () {
+$(this).attr('src', jQuery(this).attr('src').replace("27.jpg", "18.jpg"));
+$(this).attr('src', jQuery(this).attr('src').replace("4.jpg", "18.jpg"));
+});
+}
+// Inhalt einer Box verstecken
+function foldKasten(STR_box_id)
+{
+// Inhalt ausblenden
+$('#kasten_untermenu' + STR_box_id).slideUp('fast');
+$('#kasten_minimize' + STR_box_id).hide();
+$('#kasten_maximize' + STR_box_id).show();
+$('#kasten_teaser' + STR_box_id).show();
+} // end function foldBox
+// Inhalt einer Box zeigen
+function unfoldKasten(STR_box_id)
+{
+// Inhalt ausblenden
+$('#kasten_untermenu'+ STR_box_id).slideDown('fast');
+$('#kasten_minimize' + STR_box_id).show();
+$('#kasten_maximize' + STR_box_id).hide();
+$('div#kasten_teaser' + STR_box_id).hide();
+} // end function unfoldBox
+$(document).ready(function(){
+if(STR_shorturl.length > 0 && (window.location.search.indexOf('?exclusive') > -1 || window.location.search.indexOf('&exclusive') > -1)){
+window.location.href = STR_shorturl;
+}
+});
+</script>
+</footer>
+</article>
+<div class="row3 anbieter related" id="containerobject_421919">
+<div class="related">
+<div class="teaser_titel">
+<p>Firmen zum Thema</p>
+</div>
+<div class="teaser_content_noabstract_small">
+<div class="teaser_content">
+<a href="https://www.industry-of-things.de/netmodule-ag/firma/228654/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)" title="3011 Bern | Switzerland"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/33.jpg" alt="3011 Bern | Switzerland" title="3011 Bern | Switzerland"></a>
+<img class="arrow_left" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/arrow_left_white.png" alt="arrow">
+<div>
+<span class="cp_teaser_headline"><a title="3011 Bern | Switzerland" href="https://www.industry-of-things.de/netmodule-ag/firma/228654/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">NetModule AG</a></span>
+<span class="cp_teaser_title"><a title="3011 Bern | Switzerland" href="https://www.industry-of-things.de/netmodule-ag/firma/228654/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">3011 Bern | Switzerland</a></span>
+<p><a class="read_content" href="https://www.industry-of-things.de/netmodule-ag/firma/228654/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="https://www.industry-of-things.de/parasoft-deutschland-gmbh/firma/281502/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)" title="10117 Berlin | Deutschland"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/33(1).jpg" alt="10117 Berlin | Deutschland" title="10117 Berlin | Deutschland"></a>
+<img class="arrow_left" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/arrow_left_white.png" alt="arrow">
+<div>
+<span class="cp_teaser_headline"><a title="10117 Berlin | Deutschland" href="https://www.industry-of-things.de/parasoft-deutschland-gmbh/firma/281502/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">Parasoft® Deutschland GmbH</a></span>
+<span class="cp_teaser_title"><a title="10117 Berlin | Deutschland" href="https://www.industry-of-things.de/parasoft-deutschland-gmbh/firma/281502/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">10117 Berlin | Deutschland</a></span>
+<p><a class="read_content" href="https://www.industry-of-things.de/parasoft-deutschland-gmbh/firma/281502/" onclick="s_objectID=&#39;14092_containerobject_421919_firmen zum thema&#39;;linkTracking(&#39;14092_containerobject_421919_firmen zum thema&#39;,&#39;related&#39;,&#39;firmen zum thema_related&#39;)">mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="teaser_footer clear">
+<p>
+<a href="https://www.industry-of-things.de/index.cfm?pid=13974">Alle Firmen</a>
+</p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="row3 related" id="containerobject_422179">
+<div class="related">
+<div class="teaser_titel">
+<p>Mehr zum Thema</p>
+</div>
+<div class="teaser_content_noabstract_small">
+<div class="teaser_content">
+<a href="https://www.industry-of-things.de/welche-hardware-eignet-sich-besser-zur-ki-beschleunigung-a-722422/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)"><img class="art_list_img" title="Welche Hardware eignet sich besser zur KI-Beschleunigung?" alt="Welche Hardware eignet sich besser zur KI-Beschleunigung?" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/33(2).jpg"></a>
+<img class="arrow_left" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Welche Hardware eignet sich besser zur KI-Beschleunigung?" href="https://www.industry-of-things.de/welche-hardware-eignet-sich-besser-zur-ki-beschleunigung-a-722422/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">GPUs, DSPs, FPGAs oder eigene CPUs</a></span>
+<span class="ar_teaser_title" title="Welche Hardware eignet sich besser zur KI-Beschleunigung?&lt;"><a title="Welche Hardware eignet sich besser zur KI-Beschleunigung?" href="https://www.industry-of-things.de/welche-hardware-eignet-sich-besser-zur-ki-beschleunigung-a-722422/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">Welche Hardware eignet sich besser zur KI-Beschleunigung?</a></span>
+<p><a class="read_content" href="https://www.industry-of-things.de/welche-hardware-eignet-sich-besser-zur-ki-beschleunigung-a-722422/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="https://www.industry-of-things.de/wie-sich-das-menschliche-gehirn-im-computer-nachbilden-laesst-a-580513/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)"><img class="art_list_img" title="Wie sich das menschliche Gehirn im Computer nachbilden lässt" alt="Wie sich das menschliche Gehirn im Computer nachbilden lässt" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/33(3).jpg"></a>
+<img class="arrow_left" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Wie sich das menschliche Gehirn im Computer nachbilden lässt" href="https://www.industry-of-things.de/wie-sich-das-menschliche-gehirn-im-computer-nachbilden-laesst-a-580513/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">Künstliche Intelligenz</a></span>
+<span class="ar_teaser_title" title="Wie sich das menschliche Gehirn im Computer nachbilden lässt&lt;"><a title="Wie sich das menschliche Gehirn im Computer nachbilden lässt" href="https://www.industry-of-things.de/wie-sich-das-menschliche-gehirn-im-computer-nachbilden-laesst-a-580513/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">Wie sich das menschliche Gehirn im Computer nachbilden lässt</a></span>
+<p><a class="read_content" href="https://www.industry-of-things.de/wie-sich-das-menschliche-gehirn-im-computer-nachbilden-laesst-a-580513/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="teaser_content">
+<a href="https://www.industry-of-things.de/gluon-ki-entwicklung-leicht-gemacht-a-682895/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)"><img class="art_list_img" title="Gluon: KI-Entwicklung leicht gemacht" alt="Gluon: KI-Entwicklung leicht gemacht" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/33(4).jpg"></a>
+<img class="arrow_left" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/arrow_left_white.png">
+<div class="teaser_headline">
+<span class="ar_teaser_headline"><a title="Gluon: KI-Entwicklung leicht gemacht" href="https://www.industry-of-things.de/gluon-ki-entwicklung-leicht-gemacht-a-682895/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">Deep Learning</a></span>
+<span class="ar_teaser_title" title="Gluon: KI-Entwicklung leicht gemacht&lt;"><a title="Gluon: KI-Entwicklung leicht gemacht" href="https://www.industry-of-things.de/gluon-ki-entwicklung-leicht-gemacht-a-682895/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">Gluon: KI-Entwicklung leicht gemacht</a></span>
+<p><a class="read_content" href="https://www.industry-of-things.de/gluon-ki-entwicklung-leicht-gemacht-a-682895/" onclick="s_objectID=&#39;14092_containerobject_422179_mehr zum thema&#39;;linkTracking(&#39;14092_containerobject_422179_mehr zum thema&#39;,&#39;related&#39;,&#39;mehr zum thema_related&#39;)">mehr...</a></p>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="contentfactory" class="row2">
+<img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/copy.png" alt="copyright">
+<p>
+Dieser Beitrag ist urheberrechtlich geschützt. Sie wollen ihn für Ihre Zwecke verwenden? Infos finden Sie unter
+<a target="_blank" href="http://www.mycontentfactory.de/">www.mycontentfactory.de</a> (ID: 45681732 / Technologie)
+</p>
+</div>
+<div class="clear"></div>
+</div><!-- FileCached | Identifier:agmm/unique/page/2D80DADC457CCC9E42362C1FFF311FF2 | Timestamp:{ts '2019-04-03 13:27:27'} | Timespan:0m | Unique: unknown --><!-- Coming out of cache -->
+<div id="footer">
+<div id="footer_social">
+<div class="row1l" id="containerobject_427257">
+<div class="teaser_titel">
+<p>NEWS</p>
+</div>
+<div class="teaser_content">
+<div class="teaser_content">
+<div class="content_red"></div>
+<div class="teaser_headline">
+<h3><a title="Hackerattacke: So sperren Sie Meltdown und Spectre aus" href="https://www.industry-of-things.de/hackerattacke-so-sperren-sie-meltdown-und-spectre-aus-a-814822/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">Security</a></h3>
+<h2><a title="Hackerattacke: So sperren Sie Meltdown und Spectre aus" href="https://www.industry-of-things.de/hackerattacke-so-sperren-sie-meltdown-und-spectre-aus-a-814822/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">Hackerattacke: So sperren Sie Meltdown und Spectre aus</a></h2>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="teaser_content">
+<div class="content_red"></div>
+<div class="teaser_headline">
+<h3><a title="5G, KI, IIoT, AR/VR: die digitalen Hotspots 2019" href="https://www.industry-of-things.de/5g-ki-iiot-ar-vr-die-digitalen-hotspots-2019-a-814920/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">Boston Consulting Group</a></h3>
+<h2><a title="5G, KI, IIoT, AR/VR: die digitalen Hotspots 2019" href="https://www.industry-of-things.de/5g-ki-iiot-ar-vr-die-digitalen-hotspots-2019-a-814920/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">5G, KI, IIoT, AR/VR: die digitalen Hotspots 2019</a></h2>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="teaser_content">
+<div class="content_red"></div>
+<div class="teaser_headline">
+<h3><a title="Digitalisierung steigert Innovationsfähigkeit" href="https://www.industry-of-things.de/digitalisierung-steigert-innovationsfaehigkeit-a-812433/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">Lünendonk-Studie</a></h3>
+<h2><a title="Digitalisierung steigert Innovationsfähigkeit" href="https://www.industry-of-things.de/digitalisierung-steigert-innovationsfaehigkeit-a-812433/" onclick="s_objectID=&#39;14058_containerobject_427257_news&#39;;linkTracking(&#39;14058_containerobject_427257_news&#39;)" target="">Digitalisierung steigert Innovationsfähigkeit</a></h2>
+</div>
+<div class="clear">
+</div>
+</div>
+</div>
+</div>
+<div id="containerobject_450048" class="row1l">
+<div class="teaser_titel"><p>Neues auf Twitter</p></div>
+<div class="teaser_content">
+<ul id="twitter_update_list">
+<li>
+<span>
+@GlobalSign_DE @itmeetsindustry oh iris, schmacht: you´re sky is full of stars. es wird gemütlich im weltweiten. di? <a href="https://t.co/HAWuzT9nm9">https://t.co/HAWuzT9nm9</a>
+</span>
+<a href="https://twitter.com/ChristineSalzer/statuses/1113790485339025409" target="_blank">3 hours ago</a>
+</li>
+<li>
+<span>
+#Blockchain und #DSGVO - handelt es sich hier um einen unlösbaren Widerspruch? @itmeetsindustry hat den Rechtsanwal? <a href="https://t.co/aENgFIFvI6">https://t.co/aENgFIFvI6</a>
+</span>
+<a href="https://twitter.com/TSystems_MMS/statuses/1113766940269600768" target="_blank">5 hours ago</a>
+</li>
+<li>
+<span>
+#DigitalTransformation und die Bedeutung von Informationen für die #Industry40 - Prozesse, Produkte, Projekte und d? <a href="https://t.co/a42EA5TNUe">https://t.co/a42EA5TNUe</a>
+</span>
+<a href="https://twitter.com/elfsights/statuses/1113746821577347073" target="_blank">6 hours ago</a>
+</li>
+</ul>
+</div>
+</div><!-- FileCached | Identifier:52_twitterfeed | Timestamp:{ts '2019-04-04 18:42:36'} | Timespan:30m | Unique: unknown --><!-- Coming out of cache -->
+<div class="row1r" id="containerobject_429846">
+<div class="teaser_titel"><p>Events</p></div>
+<div class="teaser_content"><style type="text/css">
+.event_buttons_footer a {
+display: block;
+float: left;
+margin-right: 25px;
+margin-bottom: 15px;
+}
+.event_buttons_footer img:hover {
+opacity: 1 !important;
+}
+.event_buttons_footer img {
+margin: 0;
+float: none;
+border: 0;
+}
+.event_footer_ima {
+margin-top: 0px;
+font-family: 'Arimo', sans-serif;
+}
+.event_footer_ima span {
+display: block;
+float: left;
+font-weight: 400;
+margin-right: 6px;
+width: 185px;
+border: 1px solid #CCC;
+color: #999;
+text-align: center;
+font-size: 16px;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+.event_footer_ima span:hover {
+background-color: #C4400B;
+color: #fff;
+}
+.sm_buttons_footer a {
+display: block;
+float: left;
+margin-right: 10px;
+margin-bottom: 12px;
+}
+.sm_buttons_footer .last,
+.sm_footer_ima .last span {
+margin-right: 0;
+}
+.sm_buttons_footer img {
+margin: 0;
+float: none;
+border: 0;
+}
+.sm_footer_ima {
+margin-top: 20px;
+font-family: 'Arimo', sans-serif;
+clear: both;
+}
+.sm_footer_ima span {
+display: block;
+float: left;
+font-weight: 400;
+margin-right: 6px;
+width: 96px;
+border: 1px solid #CCC;
+color: #999;
+text-align: center;
+font-size: 16px;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+.sm_footer_ima span:hover {
+background-color: #0093C4;
+color: #fff;
+}
+.event_footer_ima p {margin-bottom:10px !important}
+.event_footer_ima img {float:none !important}
+.footer_vbm {
+display: block;
+float: left;
+border: 0px !important;
+margin: 30px 0 0 0!important;
+}
+.footer_mac_logo {
+display: block;
+border: 0px !important;
+margin: 30px 0px 0 15px!important;
+}</style>
+<div class="event_footer_ima" style="clear:both; margin-bottom:50px;">
+<p>Vernetzung ist Kern der digitalen Transformation - vernetzen Sie sich auch persönlich auf unseren IoT-Events!</p>
+<p><a href="https://www.industry-of-things.de/?pid=14824" target="_blank"><span>Alle Veranstaltungen</span></a></p>
+</div>
+<div class="teaser_titel" style="clear:both;">Follow us on</div>
+<div class="sm_buttons_footer"><a href="https://www.facebook.com/Industry-of-Things-1690833901196564/?fref=ts" target="_blank"><img alt="" onmouseout="src=&#39;/img/bep30/footer_facebook.png&#39;" onmouseover="src=&#39;/img/bep30/footer_facebook_hover.png&#39;" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/footer_facebook.png"></a> <a href="https://twitter.com/itmeetsindustry" target="_blank"> <img alt="" onmouseout="src=&#39;/img/bep30/footer_twitter.png&#39;" onmouseover="src=&#39;/img/bep30/footer_twitter_hover.png&#39;" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/footer_twitter.png"></a> <a href="https://www.xing.com/news/pages/industry-of-things-325" target="_blank"><img alt="" onmouseout="src=&#39;/img/bep30/footer_xing.png&#39;" onmouseover="src=&#39;/img/bep30/footer_xing_hover.png&#39;" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/footer_xing.png"></a> <a class="last" href="https://www.industry-of-things.de/rss/news.xml" target="_blank"><img alt="" onmouseout="src=&#39;/img/bep30/footer_rss.png&#39;" onmouseover="src=&#39;/img/bep30/footer_rss_hover.png&#39;" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/footer_rss.png"></a></div>
+<p style="font-size:17px !important; margin-top:60px">Oder kontaktieren Sie uns <a href="https://www.industry-of-things.de/impressum/">direkt</a></p>
+<a href="http://www.vogel.de/" target="_blank"><img src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/vogel_top.png" style="margin:20px 0;"></a></div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div id="footer_copy">
+<p>
+Industry of Things ist eine Marke der Vogel Communications Group. Unser gesamtes Angebot finden Sie
+<a href="https://www.vogel.de/" target="_blank">hier </a>
+</p>
+</div>
+</div>
+<div id="footer_network">
+<p>
+<a href="http://privacy.vogel.de/agb.html" target="_blank">AGB</a> |
+<a href="https://privacy.vogel.de/" target="_blank">EWG</a> |
+<a href="https://www.industry-of-things.de/hilfe/" target="_blank">Hilfe</a> |
+<a href="https://customer.vogel.de/" target="_blank">Kundencenter</a> |
+<a href="https://www.industry-of-things.de/media/" target="_blank">Media</a> |
+<a href="https://privacy.vogel.de/datenschutz.html" target="_blank">Datenschutz</a> |
+<a href="https://www.industry-of-things.de/index.cfm?pid=13966" target="_blank">Impressum</a>
+<br>Copyright © 2019 Vogel Communications Group</p>
+</div>
+<div id="footer_sources">
+RS Components; Vogel IT-Akademie; Confluent Germany GmbH; Rhebo GmbH; NetModule AG; Parasoft® Deutschland GmbH; Pixabay; Clipdealer 7115879;
+</div>
+<!-- START: settings-->
+<!-- START: settings_content_details-->
+<!-- ENDE: settings_content_details-->
+<!-- ENDE: settings-->
+<div id="sitecatalystcode">
+<script language="JavaScript" type="text/javascript">
+//<!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+if(typeof(s) != "undefined")
+{
+s.pageName="win:artikel:789023 neural compute stick 2 beschleunigt deep-learning-entwicklungen";
+s.channel="win:technologie";
+s.prop1="technologie";
+s.prop12="722422,580513,682895";
+if ($(window).width() > 1024)
+{
+}
+s.list1="228654,281502,184,252112,283961,281112";
+s.prop16="10";
+s.prop17="artikel";
+s.prop18="789023";
+s.prop19="Nachricht";
+s.prop20="kuther:margit";
+s.prop21="seite 1";
+s.prop29="14092";
+s.prop31="2019_01_10";
+s.prop32="loggedout";
+if(typeof STR_authornames !== 'undefined' && STR_authornames.length && typeof STR_globaluserids !== 'undefined' && STR_globaluserids.length)
+{
+s.prop47 = STR_authornames;
+s.prop48 = STR_globaluserids;
+}
+else if(typeof STR_trackingauthor !== 'undefined' && STR_trackingauthor.length)
+{
+s.prop47 = STR_trackingauthor;
+}
+/* Conversion Variables */
+s.events = "event6";
+s.eVar25="loggedout";
+s.eVar32="loggedout";
+/* Hierarchy Variables */
+s.hier1="win:technologie";
+//mboxLoadSCPlugin(s);
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+// var s_code=s.t();
+if(s_code)document.write(s_code)
+//if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+}
+//-->
+</script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst -->
+</div>
+<!-- Facebook Pixel Code --><script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '337772366383480');
+fbq('track', 'PageView');
+// this line of JS code can be populated by server-side
+// code that has the data needed to segment your audience
+var viewcountprop = s.prop1;
+if (typeof s.prop2 !== "undefined") {viewcountprop = s.prop2;}
+if (typeof s.prop3 !== "undefined") {viewcountprop = s.prop3;}
+if (typeof s.prop4 !== "undefined") {viewcountprop = s.prop4;}
+if (typeof s.prop5 !== "undefined") {viewcountprop = s.prop5;}
+if (typeof s.prop6 !== "undefined") {viewcountprop = s.prop6;}
+fbq('track', 'ViewContent', {
+themechannel: viewcountprop
+});
+</script><noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=337772366383480&ev=PageView&noscript=1"
+/></noscript><!-- End Facebook Pixel Code -->
+<div id="googleuniversalcode">
+<script language="JavaScript" type="text/javascript">
+<!--
+var gaProperty = 'UA-35859658-32';
+// Disable tracking if the opt-out cookie exists.
+var disableStr = 'ga-disable-' + gaProperty;
+if (document.cookie.indexOf(disableStr + '=true') > -1) {
+window[disableStr] = true;
+}
+// Opt-out function
+function gaOptout() {
+document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+window[disableStr] = true;
+}
+var INT_uid = 'loggout';
+var STR_channel = "none";
+var STR_sprop12 = "none";
+var STR_sprop13 = "none";
+var STR_sprop15 = "none";
+var STR_sprop17 = "none";
+var STR_sprop18 = "none";
+var STR_sprop19 = "none";
+var STR_sprop20 = "none";
+var STR_sprop21 = "none";
+var STR_sprop29 = "none";
+var STR_sprop37 = "none";
+var INT_sprop44 = 0;
+var STR_sprop46 = "none";
+var STR_sevar25 = "none";
+var STR_autoren = "none";
+var STR_pagename = "none";
+if(typeof(STR_trackingarticledate) == "undefined"){STR_trackingarticledate = 'none'}
+if(typeof(STR_fkentrytypetracking) == "undefined"){STR_fkentrytypetracking = 'none'}
+if(STR_fkentrytypetracking == '1'){STR_fkentrytypetracking = 'basic';}
+if(STR_fkentrytypetracking == '2'){STR_fkentrytypetracking = 'premium';}
+if(STR_fkentrytypetracking == '3'){STR_fkentrytypetracking = 'business';}
+if(typeof(s.eVar24) != "undefined"){INT_uid = s.eVar24;}
+if(typeof(s.channel) != "undefined"){STR_channel = s.channel.substr(s.channel.indexOf(":")+1);}
+if(typeof(s.prop12) != "undefined"){STR_sprop12 = s.prop12;}
+if(typeof(s.list1) != "undefined"){STR_sprop13 = s.list1;}
+if(typeof(s.prop15) != "undefined"){STR_sprop15 = s.prop15;}
+if(typeof(s.prop17) != "undefined"){STR_sprop17 = s.prop17;}
+if(typeof(s.prop19) != "undefined"){STR_sprop19 = s.prop19;}
+if(typeof(s.prop20) != "undefined"){STR_sprop20 = s.prop20;}
+if(typeof(s.prop21) != "undefined"){STR_sprop21 = s.prop21;}
+if(typeof(s.prop18) != "undefined"){STR_sprop18 = s.prop18;}
+if(typeof(s.prop16) != "undefined" && STR_sprop18 != "none"){STR_sprop18 = s.prop16 + '_' + STR_sprop18;}
+if(typeof(s.prop31) != "undefined"){STR_trackingarticledate = s.prop31;}
+if(typeof(s.prop37) != "undefined"){STR_sprop37 = s.prop37;}
+if(typeof(s.pageName) != "undefined"){STR_pagename = s.pageName;}
+if(typeof(s.prop7) != "undefined" && STR_pagename != "none"){STR_pagename = STR_pagename + '?keyword=' + s.prop7;}
+if(typeof(s.prop44) != "undefined"){INT_sprop44 = s.prop44;}
+if(typeof(s.prop46) != "undefined"){STR_sprop46 = s.prop46;}
+if(typeof(s.eVar25) != "undefined"){STR_sevar25 = s.eVar25;}
+if(typeof STR_authornames_globaluserids !== 'undefined' && STR_authornames_globaluserids.length)
+{
+STR_autoren = STR_authornames_globaluserids;
+}
+else if(typeof(s.prop47) != "undefined")
+{
+STR_autoren = s.prop47;
+}
+var BOO_gaExists = false;
+if(typeof(ga.getByName) != 'undefined' && ga.getByName('t0') != null)
+{
+BOO_gaExists = true;
+}
+if(!BOO_gaExists)
+{
+ga('create', 'UA-35859658-32', 'auto');
+}
+ga('set', 'dimension1', STR_pagename);
+ga('set', 'dimension2', STR_channel);
+ga('set', 'dimension3', STR_sprop17);
+ga('set', 'dimension4', STR_sprop18);
+ga('set', 'dimension5', STR_trackingarticledate);
+ga('set', 'dimension6', INT_uid);
+ga('set', 'dimension7', STR_sprop37);
+ga('set', 'dimension8', STR_sprop20);
+ga('set', 'dimension9', STR_sprop21);
+ga('set', 'dimension10', STR_sprop19);
+ga('set', 'dimension11', STR_sprop12);
+ga('set', 'dimension12', STR_sprop15);
+ga('set', 'dimension13', STR_sprop13);
+ga('set', 'dimension14', STR_fkentrytypetracking);
+ga('set', 'dimension15', STR_autoren);
+ga('set', 'metric1', INT_sprop44);
+if(typeof adt != "undefined" && adt.cmp.isValid())
+{
+ga('set', 'campaignName', adt.cmp.getCampaignCode()); ga('set', 'campaignMedium', adt.cmp.getMedium() ); ga('set','campaignSource', adt.cmp.getSource());
+}
+ga('set', 'anonymizeIp', true);
+ga('require', 'displayfeatures');
+ga('send', 'pageview', STR_pagename);
+// Called when a link to a product is clicked.
+function onProductClick(INT_contenttype,INT_id,STR_titel,INT_position,STR_category)
+{
+var gaProperty = 'UA-35859658-32';
+var BOO_gaExists = false;
+if(typeof(ga.getByName) != 'undefined' && ga.getByName('t0') != null)
+{
+BOO_gaExists = true;
+}
+if(!BOO_gaExists)
+{
+ga('create', 'UA-35859658-32', 'auto');
+}
+// console.log(STR_category);
+// console.log(STR_category.split(":", 1).toString());
+var STR_sprop17 = STR_category.split(":", 1).toString();
+ga('require', 'ec');
+// The product being viewed.
+ga('ec:addProduct', {
+'id': INT_contenttype + "_" + INT_id,
+'name': "paid_" + INT_contenttype + "_" + INT_id,
+'category': STR_category,
+'position': INT_position
+});
+ga('ec:setAction', 'click', {'list': STR_sprop17});
+// Send click with an event, then send user to product page.
+ga('send', 'event', 'UX', 'click', 'Results', {
+});
+}
+function paidcontent(){}
+//if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+// -->
+</script>
+<!--/DO NOT REMOVE/-->
+<!-- End Google Analytics -->
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+(function() {
+arr_cookie = new Array(1)
+arr_cookie['lang']= "de";
+document.write('<scr' + 'ipt src="//' + document.location.host + '/shared/cookie_note/cookie_note.js"></scr' + 'ipt>');
+})();
+</script><script src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/cookie_note.js"></script>
+
+
+
+
+        
+        
+	
+
+
+
+<!-- 535ms --><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div style="display: none; visibility: hidden;"><script type="text/javascript">(function(b,d,a,c){b._pcq=b._pcq||[];b._pcq.push(["_currentTime",Date.now()]);a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://cdn.pushcrew.com/js/d1ae0dfed5e47be1e6a61830f80e8eec.js";c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)})(window,document);</script></div><div style="display: none; visibility: hidden;"><script>(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/113626/script.js");</script></div><iframe style="display: none;" src="./Neural Compute Stick 2 beschleunigt Deep-Learning-Entwicklungen_files/saved_resource(1).html"></iframe><div class="pushcrew-side-button pushcrew-chicklet-position-br" style="background-color: rgb(0, 172, 185) !important; color: rgb(255, 255, 255) !important; right: -4px;"><svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-57.000000, -45.000000)"><g transform="translate(57.000000, 46.000000)"><path d="M0.508701521,0.740161403 L12.8787014,0.542093186 L12.8787014,9.93945338 L4.88268796,9.93945338" stroke="#FFFFFF" stroke-width="2" style="stroke: rgb(255, 255, 255);"></path><rect fill="#FFFFFF" x="1" y="3" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect><rect fill="#FFFFFF" x="3" y="5" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect><rect fill="#FFFFFF" x="5" y="7" width="3" height="1" style="fill: rgb(255, 255, 255);"></rect></g></g></g></svg><div>Push Notifications</div></div></body></html>
