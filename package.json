@@ -6,13 +6,15 @@
   "scripts": {
     "run": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "crawl": "ts-node src/index.ts"
+    "crawl": "ts-node src/index.ts",
+    "crawl-offline": "ts-node offline-test/test.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/cheerio": "^0.22.11",
     "crawler": "^1.2.1",
+    "dayjs": "^1.8.14",
     "fast-csv": "^2.5.0",
     "fs": "0.0.1-security"
   },

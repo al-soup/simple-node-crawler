@@ -1,10 +1,11 @@
 /* jslint es6 */
 'use strict';
+
 import { zipObject } from 'lodash';
 import { Article } from './models/article.model'
 
 module.exports = {
-    grabLinks: function($) {
+    grabLinks: function($): string[] {
         const links: string[] = [];
         $('#content_wrap').find('a').each((i: number, e: string,) => {
             links[i] = $(e).attr('href');
@@ -22,7 +23,7 @@ module.exports = {
         return <Article>zipObject(keys, arr);
     },
 
-    grabSiteContent: function($): string[] {
+    grabSiteContent: function($): Article[] {
         const result = ['.subhead', '.headline', '.vortext'].map(e => {
             // remove first character "."
             if ($(e).hasClass(e.slice(1))) {

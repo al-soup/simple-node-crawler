@@ -1,5 +1,5 @@
 # About
-A simple node crawler based on the example website of https://www.produktion.de/.
+A simple node.js crawler to grab site content from an example website.
 
 # Setup
 ## Install environment
