@@ -1,14 +1,7 @@
 /* jslint es6 */
 'use strict';
 import { zipObject } from 'lodash';
-
-type Article = {
-    time: string,
-    subhead: string,
-    headline: string,
-    vortext: string,
-    link: string
-};
+import { Article } from './models/article.model'
 
 module.exports = {
     grabLinks: function($) {

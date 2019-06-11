@@ -5,15 +5,8 @@ const selector = require('./selector');
 const Crawler = require('crawler');
 const fs = require('fs');
 const fastcsv = require('fast-csv'); 
+import { Article } from './models/article.model'
 import * as cheerio from 'cheerio';
-
-type Article = {
-    time: string,
-    subhead: string,
-    headline: string,
-    vortext: string,
-    link: string
-};
 
 // Testing only
 const getHtmlArticle = async function (file: string) {
@@ -70,7 +63,7 @@ const saveAsCSV = function(articles: Article[]): void {
     fastcsv.write(articles, { headers: true }).pipe(ws);
 }
 
-// Toggle for testing
+// Use for testing
 // getHtmlArticle('iot-site');
 // ;
 
