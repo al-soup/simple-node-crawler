@@ -1,1 +1,5 @@
+# Dependencies
 node_modules/
+
+# Exclude all outputs
+output/*

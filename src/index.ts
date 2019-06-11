@@ -56,7 +56,7 @@ const c = new Crawler({
 
 const saveAsTxtFile = function(txt: string): void {
     // falg a for "append"
-    const stream = fs.createWriteStream('crawl-response/text', { flags: 'a' });
+    const stream = fs.createWriteStream('output/text', { flags: 'a' });
     stream.on('error',  err => {
         console.log(err);
         stream.end();
@@ -66,7 +66,7 @@ const saveAsTxtFile = function(txt: string): void {
 }
 
 const saveAsCSV = function(articles: Article[]): void {
-    const ws = fs.createWriteStream("crawl-response/output.csv");
+    const ws = fs.createWriteStream('output/output.csv');
     fastcsv.write(articles, { headers: true }).pipe(ws);
 }
 
